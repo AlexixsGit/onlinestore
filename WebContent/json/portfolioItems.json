@@ -1,0 +1,12 @@
+{
+    "DivCatalogs": [
+        {
+            "id": "1",
+            "title": "Catalogo1"
+        },
+        {
+            "id": "2",
+            "title": "Catalogo2"
+        }
+    ]
+}

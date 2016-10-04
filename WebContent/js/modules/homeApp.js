@@ -1,6 +1,6 @@
 var homeApp = angular.module('homeApp', []);
 
-homeApp.controller('HomeController', ['$scope', function ($scope) {
+homeApp.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
 
     var homeCtrl = this;
 
@@ -10,5 +10,9 @@ homeApp.controller('HomeController', ['$scope', function ($scope) {
         divServiceTitle: 'Servicios',
         divLastCollectionTitle: 'Última colección'
     }
+
+    $http.get("json/portfolioItems.json").then(function (response) {
+        homeCtrl.menus = response.data.DivCatalogs;
+    });
 
 }]);
