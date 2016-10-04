@@ -1,0 +1,26 @@
+{
+    "PortfolioModalItmes": [
+        {
+            "id": "portfolioModal1",
+            "title": "Chaqueta hombre",
+            "headerDescription": "Elegante y cálida chaqueta tipo koreana",
+            "image": "img/portfolio/jacket1.jpg",
+            "longDescription": "Perfecta para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca, ir a la oficina, ya que combina con cualquier prenda",
+            "shortDescription": "Comprála a un espectacular precio de oferta",
+            "date": "Octubre 2016",
+            "price": "$65.000",
+            "status": "Disponible"
+        },
+        {
+            "id": "portfolioModal2",
+            "title": "Jean para mujer",
+            "headerDescription": "El jean para toda ocasión",
+            "image": "img/portfolio/jeans1.jpg",
+            "longDescription": "Perfecta para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
+            "shortDescription": "Comprála a un espectacular precio de oferta",
+            "date": "Octubre 2016",
+            "price": "$50.000",
+            "status": "Disponible"
+        }
+    ]
+}
