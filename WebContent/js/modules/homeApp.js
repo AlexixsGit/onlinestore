@@ -4,6 +4,11 @@ homeApp.controller('HomeController', ['$scope', function ($scope) {
 
     var homeCtrl = this;
 
-    homeCtrl.pageName = 'El madrugón del hueco';
-    homeCtrl.title = 'Encuentra las mejores ofertas';
+    homeCtrl.view = {
+        pageName: 'El madrugón del hueco',
+        title: 'Encuentra las mejores ofertas',
+        divServiceTitle: 'Servicios',
+        divLastCollectionTitle: 'Última colección'
+    }
+
 }]);
