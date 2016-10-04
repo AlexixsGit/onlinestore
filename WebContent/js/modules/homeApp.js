@@ -8,11 +8,13 @@ homeApp.controller('HomeController', ['$scope', '$http', function ($scope, $http
         pageName: 'El madrugón del hueco',
         title: 'Encuentra las mejores ofertas',
         divServiceTitle: 'Servicios',
-        divLastCollectionTitle: 'Última colección'
+        divLastCollectionTitle: 'Última colección',
+        divLastCollectionSubTitle: 'Lo más nuevo'
     }
 
+    //Recupera la lista de imagenes que se muestran en el catalogo
     $http.get("json/portfolioItems.json").then(function (response) {
-        homeCtrl.menus = response.data.DivCatalogs;
+        homeCtrl.portfolioItems = response.data.PortfolioItems;
     });
 
 }]);

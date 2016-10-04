@@ -1,12 +1,88 @@
 {
-    "DivCatalogs": [
-        {
-            "id": "1",
-            "title": "Catalogo1"
-        },
-        {
-            "id": "2",
-            "title": "Catalogo2"
-        }
-    ]
+	"PortfolioItems": [
+		{
+			"modalId": "#portfolioModal1",
+			"image": "img/portfolio/jacket1.jpg",
+			"name": "Chaqueta hombre",
+			"price": "$65.000",
+			"category": "M"
+		},
+		{
+			"modalId": "#portfolioModal2",
+			"image": "img/portfolio/jeans1.jpg",
+			"name": "Jean mujer slim",
+			"price": "$50.000",
+			"category": "F"
+		},
+		{
+			"modalId": "#portfolioModal1",
+			"image": "img/portfolio/jacket1.jpg",
+			"name": "Chaqueta hombre",
+			"price": "$65.000",
+			"category": "M"
+		},
+		{
+			"modalId": "#portfolioModal2",
+			"image": "img/portfolio/jeans1.jpg",
+			"name": "Jean mujer slim",
+			"price": "$50.000",
+			"category": "F"
+		},
+		{
+			"modalId": "#portfolioModal1",
+			"image": "img/portfolio/jacket1.jpg",
+			"name": "Chaqueta hombre",
+			"price": "$65.000",
+			"category": "M"
+		},
+		{
+			"modalId": "#portfolioModal2",
+			"image": "img/portfolio/jeans1.jpg",
+			"name": "Jean mujer slim",
+			"price": "$50.000",
+			"category": "F"
+		},
+		{
+			"modalId": "#portfolioModal1",
+			"image": "img/portfolio/jacket1.jpg",
+			"name": "Chaqueta hombre",
+			"price": "$65.000",
+			"category": "M"
+		},
+		{
+			"modalId": "#portfolioModal2",
+			"image": "img/portfolio/jeans1.jpg",
+			"name": "Jean mujer slim",
+			"price": "$50.000",
+			"category": "F"
+		},
+		{
+			"modalId": "#portfolioModal1",
+			"image": "img/portfolio/jacket1.jpg",
+			"name": "Chaqueta hombre",
+			"price": "$65.000",
+			"category": "M"
+		},
+		{
+			"modalId": "#portfolioModal2",
+			"image": "img/portfolio/jeans1.jpg",
+			"name": "Jean mujer slim",
+			"price": "$50.000",
+			"category": "F"
+		},
+		{
+			"modalId": "#portfolioModal1",
+			"image": "img/portfolio/jacket1.jpg",
+			"name": "Chaqueta hombre",
+			"price": "$65.000",
+			"category": "M"
+		},
+		{
+			"modalId": "#portfolioModal2",
+			"image": "img/portfolio/jeans1.jpg",
+			"name": "Jean mujer slim",
+			"price": "$50.000",
+			"category": "F"
+		}
+	]
 }
