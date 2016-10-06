@@ -1,87 +1,34 @@
 {
 	"PortfolioItems": [
+		
 		{
-			"modalId": "#portfolioModal1",
-			"image": "img/portfolio/jacket1.jpg",
-			"name": "Chaqueta hombre",
-			"price": "$65.000",
+			"modalId": "#portfolioModal3",
+			"image": "img/portfolio/buso1.jpg",
+			"name": "Buso hombre",
+			"price": "$50.000",
+			"category": "M",
+			"subCategorY": "",
+			"itemCategory": "JAC"
+		},
+		{
+			"modalId": "#portfolioModal4",
+			"image": "img/portfolio/buso2.jpg",
+			"name": "Buso hombre",
+			"price": "$50.000",
 			"category": "M"
 		},
 		{
-			"modalId": "#portfolioModal2",
-			"image": "img/portfolio/jeans1.jpg",
-			"name": "Jean mujer slim",
+			"modalId": "#portfolioModal5",
+			"image": "img/portfolio/buso3.jpg",
+			"name": "Buso hombre",
 			"price": "$50.000",
-			"category": "F"
-		},
-		{
-			"modalId": "#portfolioModal1",
-			"image": "img/portfolio/jacket1.jpg",
-			"name": "Chaqueta hombre",
-			"price": "$65.000",
 			"category": "M"
 		},
 		{
-			"modalId": "#portfolioModal2",
-			"image": "img/portfolio/jeans1.jpg",
-			"name": "Jean mujer slim",
-			"price": "$50.000",
-			"category": "F"
-		},
-		{
-			"modalId": "#portfolioModal1",
-			"image": "img/portfolio/jacket1.jpg",
-			"name": "Chaqueta hombre",
-			"price": "$65.000",
-			"category": "M"
-		},
-		{
-			"modalId": "#portfolioModal2",
-			"image": "img/portfolio/jeans1.jpg",
-			"name": "Jean mujer slim",
-			"price": "$50.000",
-			"category": "F"
-		},
-		{
-			"modalId": "#portfolioModal1",
-			"image": "img/portfolio/jacket1.jpg",
-			"name": "Chaqueta hombre",
-			"price": "$65.000",
-			"category": "M"
-		},
-		{
-			"modalId": "#portfolioModal2",
-			"image": "img/portfolio/jeans1.jpg",
-			"name": "Jean mujer slim",
-			"price": "$50.000",
-			"category": "F"
-		},
-		{
-			"modalId": "#portfolioModal1",
-			"image": "img/portfolio/jacket1.jpg",
-			"name": "Chaqueta hombre",
-			"price": "$65.000",
-			"category": "M"
-		},
-		{
-			"modalId": "#portfolioModal2",
-			"image": "img/portfolio/jeans1.jpg",
-			"name": "Jean mujer slim",
-			"price": "$50.000",
-			"category": "F"
-		},
-		{
-			"modalId": "#portfolioModal1",
-			"image": "img/portfolio/jacket1.jpg",
-			"name": "Chaqueta hombre",
-			"price": "$65.000",
-			"category": "M"
-		},
-		{
-			"modalId": "#portfolioModal2",
-			"image": "img/portfolio/jeans1.jpg",
-			"name": "Jean mujer slim",
-			"price": "$50.000",
+			"modalId": "#portfolioModal6",
+			"image": "img/portfolio/conjunto_pijama2.jpg",
+			"name": "Conjunto pijama",
+			"price": "$25.000",
 			"category": "F"
 		}
 	]

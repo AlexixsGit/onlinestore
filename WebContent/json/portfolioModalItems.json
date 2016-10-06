@@ -21,6 +21,50 @@
             "date": "Octubre 2016",
             "price": "$50.000",
             "status": "Disponible"
+        },
+        {
+            "id": "portfolioModal3",
+            "title": "Buso para hombre",
+            "headerDescription": "El buso para toda ocasión",
+            "image": "img/portfolio/buso1.jpg",
+            "longDescription": "Perfecto para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
+            "shortDescription": "Comprálo a un espectacular precio de oferta",
+            "date": "Octubre 2016",
+            "price": "$50.000",
+            "status": "Disponible"
+        },
+        {
+            "id": "portfolioModal4",
+            "title": "Buso para hombre",
+            "headerDescription": "El buso para toda ocasión",
+            "image": "img/portfolio/buso2.jpg",
+            "longDescription": "Perfecto para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
+            "shortDescription": "Comprálo a un espectacular precio de oferta",
+            "date": "Octubre 2016",
+            "price": "$50.000",
+            "status": "Disponible"
+        },
+        {
+            "id": "portfolioModal5",
+            "title": "Buso para hombre",
+            "headerDescription": "El buso para toda ocasión",
+            "image": "img/portfolio/buso3.jpg",
+            "longDescription": "Perfecto para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
+            "shortDescription": "Comprálo a un espectacular precio de oferta",
+            "date": "Octubre 2016",
+            "price": "$50.000",
+            "status": "Disponible"
+        },
+        {
+            "id": "portfolioModal6",
+            "title": "Conjunto de pijama",
+            "headerDescription": "La pijama para toda ocasión",
+            "image": "img/portfolio/conjunto_pijama2.jpg",
+            "longDescription": "Perfecto para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
+            "shortDescription": "Comprála a un espectacular precio de oferta",
+            "date": "Octubre 2016",
+            "price": "$25.000",
+            "status": "Disponible"
         }
     ]
 }

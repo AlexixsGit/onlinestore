@@ -1,15 +1,27 @@
-var homeApp = angular.module('homeApp', []);
+var homeApp = angular.module('homeApp', ["ngRoute"]);
 
-homeApp.controller('HomeController', ['$scope', '$http', function ($scope, $http) {
+homeApp.config(function ($routeProvider) {
+    $routeProvider.when('/MenCollection', {
+        templateUrl: 'html/menCollection.html'
+    }).when('/', {
+        templateUrl: 'html/home.html'
+    }).otherwise({
+        redirectTo: '/'
+    })
+})
+
+homeApp.controller('HomeController', ['$scope', '$http', '$location', function ($scope, $http, $location) {
 
     var homeCtrl = this;
 
     homeCtrl.view = {
         pageName: 'El madrugón del hueco',
-        title: 'Encuentra las mejores ofertas',
-        divServiceTitle: 'Servicios',
+        title: 'Las mejores ofertas',
+        divServiceTitle: 'Moda',
+        divServicesSubTitle: 'Escoge la moda a tu gusto',
         divLastCollectionTitle: 'Última colección',
-        divLastCollectionSubTitle: 'Lo más nuevo'
+        divLastCollectionSubTitle: 'Lo más nuevo',
+        headerButtonLabel: 'Explorar',
     }
 
     //Recupera la lista de items que se muestran en el catalogo
@@ -21,5 +33,9 @@ homeApp.controller('HomeController', ['$scope', '$http', function ($scope, $http
     $http.get("json/portfolioModalItems.json").then(function (response) {
         homeCtrl.portfolioModalItems = response.data.PortfolioModalItmes;
     });
+
+    homeCtrl.redirectTo = function () {
+        $location.path("/MenCollection");
+    }
 
 }]);
