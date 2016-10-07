@@ -13,7 +13,7 @@ public class InitApp {
 	@Path("/writeLog")
 	public Response writeLog() {
 		System.out.println("Inicio aplicacion");
-		System.setProperty("logback.configurationFile", "/log/logback.xml");
+		System.setProperty("logback.configurationFile", "C:\\log\\logback.xml");
 		Logger log = (Logger) LoggerFactory.getLogger(InitApp.class);
 		log.info("mensaje1");
 		log.error("Error1");
