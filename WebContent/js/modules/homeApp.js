@@ -1,5 +1,11 @@
 var homeApp = angular.module('homeApp', ["ngRoute"]);
 
+homeApp.run(function () {
+    console.log('Ingresando al método principal de home...');
+    $('#mainDiv').show();
+    $('#genericErrorDiv').hide();
+})
+
 homeApp.config(function ($routeProvider) {
     $routeProvider.when('/MenCollection', {
         templateUrl: 'html/menCollection.html'

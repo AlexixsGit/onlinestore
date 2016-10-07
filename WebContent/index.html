@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="homeApp" ng-controller="HomeController as homeCtrl">
+<html lang="en" ng-app="homeApp" ng-controller="HomeController as homeCtrl" ng-cloak>
 
 <head>
 	<meta charset="utf-8">
@@ -8,7 +8,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>{{::homeCtrl.view.pageName}}</title>
+	<title>El madrugón del hueco</title>
 
 	<!-- ANGULAR -->
 	<script src="js/angular.min.js"></script>
@@ -38,93 +38,105 @@
 
 </head>
 
-<body id="page-top" class="index">
 
-	<!-- Navigation -->
-	<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-		<div class="container">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header page-scroll">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<body id="page-top" class="index" ng-cloak>
+
+	<div id="genericErrorDiv" style="display:block" ng-cloak>
+			<div class="container">
+				<div class="row">
+						<img src="img/general/technicalerror.jpg" width="200px" class="img-responsive" alt="">
+					<div class="col-lg-12 text-center">
+						<h2 class="section-heading">En este momento el sistema no esta disponible, por favor intenta más tarde</h2>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div id="mainDiv" style="display:none">
+		<!-- Navigation -->
+		<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 					<span class="sr-only">Toggle navigation</span> Menu <i
 						class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand page-scroll" href="#page-top">{{::homeCtrl.view.pageName}}</a>
-			</div>
+					<a class="navbar-brand page-scroll" href="#page-top">{{::homeCtrl.view.pageName}}</a>
+				</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="hidden">
-						<a href="#page-top"></a>
-					</li>
-					<li><a class="page-scroll" href="#Servicios">{{homeCtrl.view.divServiceTitle}}</a>
-					</li>
-					<li><a class="page-scroll" data-toggle="dropdown">Catálogo
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li><a class="page-scroll" href="#Servicios">{{homeCtrl.view.divServiceTitle}}</a>
+						</li>
+						<li><a class="page-scroll" data-toggle="dropdown">Catálogo
 							<span class="caret"></span>
 					</a>
-						<ul class="dropdown-menu" style="background-color: black">
-							<li class="dropdown-header">ÚlTIMA COLECCIÓN</li>
-							<li><a href="#portfolio" class="page-scroll">Colección</a></li>
-							<li class="dropdown-header">ROPA DE HOMBRE</li>
-							<li><a href="#">Jeans</a></li>
-							<li><a href="#">Camisas</a></li>
-							<li><a href="#">Pantalones</a></li>
-							<li class="divider"></li>
-							<li class="dropdown-header">ROPA DE MUJER</li>
-							<li><a href="#">Jeans</a></li>
-							<li><a href="#">Blusas</a></li>
-							<li><a href="#">Pantalones</a></li>
+							<ul class="dropdown-menu" style="background-color: black">
+								<li class="dropdown-header">ÚlTIMA COLECCIÓN</li>
+								<li><a href="#portfolio" class="page-scroll">Colección</a></li>
+								<li class="dropdown-header">ROPA DE HOMBRE</li>
+								<li><a href="#">Jeans</a></li>
+								<li><a href="#">Camisas</a></li>
+								<li><a href="#">Pantalones</a></li>
+								<li class="divider"></li>
+								<li class="dropdown-header">ROPA DE MUJER</li>
+								<li><a href="#">Jeans</a></li>
+								<li><a href="#">Blusas</a></li>
+								<li><a href="#">Pantalones</a></li>
+							</ul>
+						</li>
+						<li><a class="page-scroll" href="#about">About</a></li>
+						<li><a class="page-scroll" href="#team">Team</a></li>
+						<li><a class="page-scroll" href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<!-- Header -->
+		<header ng-cloak>
+			<div class="container">
+				<div class="intro-text">
+					<div class="intro-lead-in">{{::homeCtrl.view.pageName}}</div>
+					<div class="intro-heading">{{::homeCtrl.view.title}}</div>
+					<a href="#Servicios" class="page-scroll btn btn-xl">{{::homeCtrl.view.headerButtonLabel}}</a>
+				</div>
+			</div>
+		</header>
+
+		<div ng-view></div>
+
+
+		<footer ng-cloak>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<span class="copyright">Copyright &copy; Your Website 2016</span>
+					</div>
+					<div class="col-md-4">
+						<ul class="list-inline social-buttons">
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
 						</ul>
-					</li>
-					<li><a class="page-scroll" href="#about">About</a></li>
-					<li><a class="page-scroll" href="#team">Team</a></li>
-					<li><a class="page-scroll" href="#contact">Contact</a></li>
-				</ul>
-			</div>
-			<!-- /.navbar-collapse -->
-		</div>
-		<!-- /.container-fluid -->
-	</nav>
-
-	<!-- Header -->
-	<header>
-		<div class="container">
-			<div class="intro-text">
-				<div class="intro-lead-in">{{::homeCtrl.view.pageName}}</div>
-				<div class="intro-heading">{{::homeCtrl.view.title}}</div>
-				<a href="#Servicios" class="page-scroll btn btn-xl">{{::homeCtrl.view.headerButtonLabel}}</a>
-			</div>
-		</div>
-	</header>
-
-	<div ng-view></div>
-
-
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<span class="copyright">Copyright &copy; Your Website 2016</span>
-				</div>
-				<div class="col-md-4">
-					<ul class="list-inline social-buttons">
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-				</div>
-				<div class="col-md-4">
-					<ul class="list-inline quicklinks">
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Terms of Use</a></li>
-					</ul>
+					</div>
+					<div class="col-md-4">
+						<ul class="list-inline quicklinks">
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Terms of Use</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-	</footer>
+		</footer>
 
-
+	</div>
 
 	<!-- jQuery -->
 	<script src="vendor/jquery/jquery.min.js"></script>
