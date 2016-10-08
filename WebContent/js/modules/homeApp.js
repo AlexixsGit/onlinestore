@@ -40,6 +40,11 @@ homeApp.controller('HomeController', ['$scope', '$http', '$location', function (
         homeCtrl.portfolioModalItems = response.data.PortfolioModalItmes;
     });
 
+    //Recupera la lista de categorias disponibles
+    $http.get("json/homeCategories.json").then(function (response) {
+        homeCtrl.homeCategories = response.data.HomeCategories;
+    });
+
     homeCtrl.email = {
         to: "",
         from: "",
