@@ -52,8 +52,10 @@ homeApp.controller('HomeController', ['$scope', '$http', '$location', function (
         customerMessage: ""
     }
 
-    var localUrl = "http://localhost:8080/OnlineStore/rest/SendEmailRest/sendEmail";
-    var externalUrl = "http://192.168.1.51:8080/OnlineStore/rest/SendEmailRest/sendEmail";
+    var localHost = "http://localhost:8080";
+    var ipHost = "http://192.168.1.51:8080";
+    var localUrl = localHost + "/OnlineStore/rest/SendEmailRest/sendEmail";
+    var externalUrl = ipHost + "/OnlineStore/rest/SendEmailRest/sendEmail";
 
     homeCtrl.sendMessage = function () {
         var req = {
@@ -87,6 +89,18 @@ homeApp.controller('HomeController', ['$scope', '$http', '$location', function (
 
     homeCtrl.redirectTo = function () {
         $location.path("/MenCollection");
+    }
+
+    //Ejecucion inicial de la aplicacion
+    init();
+    function init() {
+        // $http.get(localHost + "/OnlineStore/rest/InitApp/writeLog").then(function (response) {
+        //     console.log(response);
+        // });
+        $http.get(ipHost + "/OnlineStore/rest/InitApp/writeLog").then(function (response) {
+            console.log(response);
+        });
+
     }
 
     function cleanCustomerData() {
