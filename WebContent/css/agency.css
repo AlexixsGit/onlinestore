@@ -315,7 +315,7 @@ section h3.section-subheading {
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
   background: rgba(254, 209, 54, 0.9);
   position: absolute;
-  width: 100%;
+  width: 70%;
   height: 100%;
   opacity: 0;
   transition: all ease 0.5s;
@@ -343,8 +343,8 @@ section h3.section-subheading {
   margin: 0;
 }
 #portfolio .portfolio-item .portfolio-caption {
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 250px;
+  /* margin: 0 auto; */
   background-color: white;
   text-align: center;
   padding: 25px;

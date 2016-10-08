@@ -1,35 +1,65 @@
 {
 	"PortfolioItems": [
-		
 		{
+			"code": "1",
+			"reference": "",
 			"modalId": "#portfolioModal3",
 			"image": "img/portfolio/buso1.jpg",
 			"name": "Buso hombre",
 			"price": "$50.000",
 			"category": "M",
 			"subCategorY": "",
-			"itemCategory": "JAC"
+			"itemCategory": "JAC",
+			"size": {
+				"S": "S",
+				"M": "M",
+				"L": "L"
+			}
 		},
 		{
+			"code": "2",
+			"reference": "",
 			"modalId": "#portfolioModal4",
 			"image": "img/portfolio/buso2.jpg",
 			"name": "Buso hombre",
 			"price": "$50.000",
-			"category": "M"
+			"category": "M",
+			"size": {
+				"S": "S",
+				"M": "M",
+				"L": "L",
+				"XL": "XL"
+			}
 		},
 		{
+			"code": "3",
+			"reference": "",
 			"modalId": "#portfolioModal5",
 			"image": "img/portfolio/buso3.jpg",
 			"name": "Buso hombre",
 			"price": "$50.000",
-			"category": "M"
+			"category": "M",
+			"size": {
+				"S": "S",
+				"M": "M",
+				"L": "L",
+				"XL": "XL"
+			}
 		},
 		{
+			"code": "4",
+			"reference": "",
 			"modalId": "#portfolioModal6",
 			"image": "img/portfolio/conjunto_pijama2.jpg",
 			"name": "Conjunto pijama",
 			"price": "$25.000",
-			"category": "F"
+			"category": "F",
+			"size": {
+				"S": "S",
+				"M": "M",
+				"L": "L",
+				"XL": "XL"
+			}
 		}
 	]
 }

@@ -24,7 +24,7 @@ homeApp.controller('HomeController', ['$scope', '$http', '$location', function (
         pageName: 'El madrugón del hueco',
         title: 'Las mejores ofertas',
         divServiceTitle: 'Moda',
-        divServicesSubTitle: 'Escoge la moda a tu gusto',
+        divServicesSubTitle: 'Elige tu categoría',
         divLastCollectionTitle: 'Última colección',
         divLastCollectionSubTitle: 'Lo más nuevo',
         headerButtonLabel: 'Explorar',
@@ -60,7 +60,7 @@ homeApp.controller('HomeController', ['$scope', '$http', '$location', function (
     homeCtrl.sendMessage = function () {
         var req = {
             method: 'POST',
-            url: externalUrl,
+            url: localUrl,
             headers: {
                 'Content-Type': "application/json"
             },
@@ -95,12 +95,12 @@ homeApp.controller('HomeController', ['$scope', '$http', '$location', function (
     //Ejecucion inicial de la aplicacion
     init();
     function init() {
-        // $http.get(localHost + "/OnlineStore/rest/InitApp/writeLog").then(function (response) {
-        //     sessionStorage.setItem("ipAddress", response.data.ip.hostAddress);
-        // });
-        $http.get(ipHost + "/OnlineStore/rest/InitApp/writeLog").then(function (response) {
+        $http.get(localHost + "/OnlineStore/rest/InitApp/writeLog").then(function (response) {
             sessionStorage.setItem("ipAddress", response.data.ip.hostAddress);
         });
+        // $http.get(ipHost + "/OnlineStore/rest/InitApp/writeLog").then(function (response) {
+        //     sessionStorage.setItem("ipAddress", response.data.ip.hostAddress);
+        // });
 
     }
 
