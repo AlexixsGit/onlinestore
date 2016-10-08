@@ -11,6 +11,7 @@ public class Email {
 	private String customerName = "";
 	private String customerPhone = "";
 	private String customerMessage = "";
+	private String ip = "";
 
 	public String getTo() {
 		return to;
@@ -82,5 +83,13 @@ public class Email {
 
 	public void setCustomerEmail(String customerEmail) {
 		this.customerEmail = customerEmail;
+	}
+
+	public String getIp() {
+		return ip;
+	}
+
+	public void setIp(String ip) {
+		this.ip = ip;
 	}
 }

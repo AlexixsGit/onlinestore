@@ -74,6 +74,7 @@ homeApp.controller('HomeController', ['$scope', '$http', '$location', function (
                 customerName: homeCtrl.email.customerName,
                 customerPhone: homeCtrl.email.customerPhone,
                 customerMessage: homeCtrl.email.customerMessage,
+                ip: sessionStorage.getItem('ipAddress')
             }
         }
 
@@ -95,10 +96,10 @@ homeApp.controller('HomeController', ['$scope', '$http', '$location', function (
     init();
     function init() {
         // $http.get(localHost + "/OnlineStore/rest/InitApp/writeLog").then(function (response) {
-        //     console.log(response);
+        //     sessionStorage.setItem("ipAddress", response.data.ip.hostAddress);
         // });
         $http.get(ipHost + "/OnlineStore/rest/InitApp/writeLog").then(function (response) {
-            console.log(response);
+            sessionStorage.setItem("ipAddress", response.data.ip.hostAddress);
         });
 
     }

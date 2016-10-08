@@ -20,7 +20,9 @@ import javax.ws.rs.core.Response;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.slf4j.LoggerFactory;
 
+import ch.qos.logback.classic.Logger;
 import co.com.onlinestore.model.Email;
 
 @Path("/SendEmailRest")
@@ -28,9 +30,20 @@ import co.com.onlinestore.model.Email;
 @Consumes(MediaType.APPLICATION_JSON)
 public class SendEmailRest {
 
+	private Logger log;
+
+	public SendEmailRest() {
+		System.setProperty("logback.configurationFile", "C:\\onlineStoreLog\\logback.xml");
+		this.log = (Logger) LoggerFactory.getLogger(SendEmailRest.class);
+	}
+
 	@POST
 	@Path("/sendEmail")
 	public Response sendEmail(String data) throws JsonParseException, JsonMappingException, IOException {
+		ObjectMapper mapper = new ObjectMapper();
+		Email email = mapper.readValue(data, Email.class);
+
+		writeLog(email);
 
 		final String username = "alexixsortizz@gmail.com";
 		final String password = "Dom15May";
@@ -56,23 +69,31 @@ public class SendEmailRest {
 			message.setFrom(new InternetAddress("almejorPrecio@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("alexixsortizz@gmail.com"));
 			message.setSubject(subject);
-			message.setText(completeMessage(data));
+			message.setText(completeMessage(email));
 
 			Transport.send(message);
-
-			System.out.println("Email sent");
-
+			log.info("Correo enviado correctamente");
+			log.info("**Fin de envio de correo**");
 		} catch (MessagingException e) {
+			log.error("Error enviando el correo  " + e.getMessage());
 			throw new RuntimeException(e);
+
 		}
 		return Response.ok().build();
 	}
 
-	private String completeMessage(String data) throws JsonParseException, JsonMappingException, IOException {
-		ObjectMapper mapper = new ObjectMapper();
-		StringBuilder message = new StringBuilder();
+	private void writeLog(Email email) {
+		log.info("**Inicio de envio de correo**");
+		log.info("Cliente: " + email.getCustomerName());
+		log.info("Correo: " + email.getCustomerEmail());
+		log.info("Telefono: " + email.getCustomerPhone());
+		log.info("Mensaje: " + email.getCustomerMessage());
+		log.info("Direccion ip: " + email.getIp());
+	}
 
-		Email email = mapper.readValue(data, Email.class);
+	private String completeMessage(Email email) throws JsonParseException, JsonMappingException, IOException {
+
+		StringBuilder message = new StringBuilder();
 
 		message.append("Cliente: " + email.getCustomerName()).append("\n");
 		message.append("Correo: " + email.getCustomerEmail()).append("\n");
@@ -80,6 +101,14 @@ public class SendEmailRest {
 		message.append("Mensaje:\n " + email.getCustomerMessage()).append("\n");
 
 		return message.toString();
+	}
+
+	public Logger getLog() {
+		return log;
+	}
+
+	public void setLog(Logger log) {
+		this.log = log;
 	}
 
 }
