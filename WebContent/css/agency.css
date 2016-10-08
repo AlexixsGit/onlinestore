@@ -539,10 +539,12 @@ section h3.section-subheading {
   text-align: center;
   margin-bottom: 50px;
 }
-.team-member img {
+.team-member img:hover {
   margin: 0 auto;
   border: 7px solid white;
+  cursor: pointer;
 }
+
 .team-member h4 {
   margin-top: 25px;
   margin-bottom: 0;
