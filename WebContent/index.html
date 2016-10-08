@@ -86,13 +86,62 @@
 
 		<!-- Header -->
 		<header ng-cloak>
-			<div class="container">
+			<!--<div class="container">
 				<div class="intro-text">
 					<div class="intro-lead-in">{{::homeCtrl.view.pageName}}</div>
 					<div class="intro-heading">{{::homeCtrl.view.title}}</div>
 					<a href="#Servicios" class="page-scroll btn btn-xl">{{::homeCtrl.view.headerButtonLabel}}</a>
 				</div>
+			</div>-->
+
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="5000">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<div class="container">
+							<div class="intro-text">
+								<div class="intro-lead-in">{{::homeCtrl.view.pageName}}</div>
+								<div class="intro-heading">{{::homeCtrl.view.title}}</div>
+								<a href="#Servicios" class="page-scroll btn btn-xl">{{::homeCtrl.view.headerButtonLabel}}</a>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="container">
+							<div class="intro-text">
+								<div class="intro-lead-in">{{::homeCtrl.view.adds2Title}}</div>
+								<div class="intro-heading">{{::homeCtrl.view.adds2SubTitle}}</div>
+								<a href="#portfolio" class="page-scroll btn btn-xl">{{::homeCtrl.view.adds2ButtonLabel}}</a>
+							</div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="container">
+							<div class="intro-text">
+								<div class="intro-lead-in">{{::homeCtrl.view.adds3Title}}</div>
+								<div class="intro-heading">{{::homeCtrl.view.adds3SubTitle}}</div>
+								<a href="#Servicios" class="page-scroll btn btn-xl">{{::homeCtrl.view.adds3ButtonLabel}}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
 			</div>
+			<!-- Carousel -->
 		</header>
 
 		<!-- Servicios Section o moda-->
@@ -476,6 +525,7 @@
 
 	<!-- Angular components -->
 	<script src="js/modules/homeApp.js"></script>
+
 
 </body>
 
