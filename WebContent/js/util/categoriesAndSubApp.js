@@ -24,3 +24,9 @@ itemCategory.constant('itemCategory', {
     "Jean": "JEN", //Jean
     "Shirt": "SHI", //Camisa
 })
+
+//Identifica si una prenda es coleccion nueva o vieja
+itemCategory.constant('itemCollection', {
+    "NEW": "NEW", //NUEVA
+    "OLD": "OLD"//VIEJA
+})

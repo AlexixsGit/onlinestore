@@ -755,3 +755,7 @@ body {
 .img-portfolio{
   box-shadow: 0 27px 36px 0 rgba(0, 0, 0, 4.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.img-portfolio-modal{
+  box-shadow: 0 27px 36px 0 rgba(0, 0, 0, 4.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

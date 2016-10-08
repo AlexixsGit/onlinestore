@@ -14,7 +14,8 @@
 				"S": "S",
 				"M": "M",
 				"L": "L"
-			}
+			},
+			"collection": "NEW"
 		},
 		{
 			"code": "2",
@@ -29,7 +30,8 @@
 				"M": "M",
 				"L": "L",
 				"XL": "XL"
-			}
+			},
+			"collection": "NEW"
 		},
 		{
 			"code": "3",
@@ -44,7 +46,8 @@
 				"M": "M",
 				"L": "L",
 				"XL": "XL"
-			}
+			},
+			"collection": "NEW"
 		},
 		{
 			"code": "4",
@@ -59,7 +62,8 @@
 				"M": "M",
 				"L": "L",
 				"XL": "XL"
-			}
+			},
+			"collection": "OLD"
 		}
 	]
 }
