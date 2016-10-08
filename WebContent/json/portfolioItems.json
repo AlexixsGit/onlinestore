@@ -1,7 +1,7 @@
 {
 	"PortfolioItems": [
 		{
-			"code": "1",
+			"code": "buso1",
 			"reference": "",
 			"modalId": "#portfolioModal3",
 			"image": "img/portfolio/buso1.jpg",
@@ -18,7 +18,7 @@
 			"collection": "NEW"
 		},
 		{
-			"code": "2",
+			"code": "buso2",
 			"reference": "",
 			"modalId": "#portfolioModal4",
 			"image": "img/portfolio/buso2.jpg",
@@ -34,7 +34,7 @@
 			"collection": "NEW"
 		},
 		{
-			"code": "3",
+			"code": "buso3",
 			"reference": "",
 			"modalId": "#portfolioModal5",
 			"image": "img/portfolio/buso3.jpg",
@@ -50,7 +50,7 @@
 			"collection": "NEW"
 		},
 		{
-			"code": "4",
+			"code": "conjunto_pijama2",
 			"reference": "",
 			"modalId": "#portfolioModal6",
 			"image": "img/portfolio/conjunto_pijama2.jpg",
@@ -64,6 +64,54 @@
 				"XL": "XL"
 			},
 			"collection": "OLD"
+		},
+		{
+			"code": "buso4",
+			"reference": "",
+			"modalId": "#portfolioModal7",
+			"image": "img/portfolio/buso4.jpg",
+			"name": "Buso hombre",
+			"price": "$50.000",
+			"category": "M",
+			"size": {
+				"S": "S",
+				"M": "M",
+				"L": "L",
+				"XL": "XL"
+			},
+			"collection": "NEW"
+		},
+		{
+			"code": "buso5",
+			"reference": "",
+			"modalId": "#portfolioModal8",
+			"image": "img/portfolio/buso5.jpg",
+			"name": "Buso hombre",
+			"price": "$50.000",
+			"category": "M",
+			"size": {
+				"S": "S",
+				"M": "M",
+				"L": "L",
+				"XL": "XL"
+			},
+			"collection": "NEW"
+		},
+		{
+			"code": "buso6",
+			"reference": "",
+			"modalId": "#portfolioModal9",
+			"image": "img/portfolio/buso6.jpg",
+			"name": "Buso hombre",
+			"price": "$50.000",
+			"category": "M",
+			"size": {
+				"S": "S",
+				"M": "M",
+				"L": "L",
+				"XL": "XL"
+			},
+			"collection": "NEW"
 		}
 	]
 }

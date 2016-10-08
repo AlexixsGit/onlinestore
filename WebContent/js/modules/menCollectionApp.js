@@ -1,18 +1,16 @@
-var homeApp = angular.module('homeApp', ["ngRoute"]);
+var menCollectionApp = angular.module('menCollectionApp', []);
 
-homeApp.run(function () {
+menCollectionApp.run(function () {
     console.log('Ingresando al método principal de home...');
-    $('#mainDiv').show();
-    $('#genericErrorDiv').hide();
+    $('#menCollection').show();
+    $('#menCollectionErrorDiv').hide();
 })
 
+menCollectionApp.controller('MenCollectionController', ['$scope', '$http', '$window', function ($scope, $http, $window) {
 
-homeApp.controller('HomeController', ['$scope', '$http', '$location', '$window', function ($scope, $http, $location, $window) {
+    var menCollectionCtrl = this;
 
-    var homeCtrl = this;
-    var redirectTo = '';
-
-    homeCtrl.view = {
+    menCollectionCtrl.view = {
         pageName: 'El madrugón del hueco',
         title: 'Las mejores ofertas',
         divServiceTitle: 'Moda',
@@ -21,23 +19,22 @@ homeApp.controller('HomeController', ['$scope', '$http', '$location', '$window',
         divLastCollectionSubTitle: 'Lo más nuevo',
         headerButtonLabel: 'Explorar',
     }
-
     //Recupera la lista de items que se muestran en el catalogo
-    $http.get("json/portfolioItems.json").then(function (response) {
-        homeCtrl.portfolioItems = response.data.PortfolioItems;
+    $http.get("../json/portfolioItems.json").then(function (response) {
+        menCollectionCtrl.portfolioItems = response.data.PortfolioItems;
     });
 
     //Recupera la lista de modales asociados a los items del catalogo
-    $http.get("json/portfolioModalItems.json").then(function (response) {
-        homeCtrl.portfolioModalItems = response.data.PortfolioModalItmes;
+    $http.get("../json/portfolioModalItems.json").then(function (response) {
+        menCollectionCtrl.portfolioModalItems = response.data.PortfolioModalItmes;
     });
 
     //Recupera la lista de categorias disponibles
-    $http.get("json/homeCategories.json").then(function (response) {
-        homeCtrl.homeCategories = response.data.HomeCategories;
+    $http.get("../json/homeCategories.json").then(function (response) {
+        menCollectionCtrl.homeCategories = response.data.HomeCategories;
     });
 
-    homeCtrl.email = {
+    menCollectionCtrl.email = {
         to: "",
         from: "",
         host: "",
@@ -54,7 +51,7 @@ homeApp.controller('HomeController', ['$scope', '$http', '$location', '$window',
     var localUrl = localHost + "/OnlineStore/rest/SendEmailRest/sendEmail";
     var externalUrl = ipHost + "/OnlineStore/rest/SendEmailRest/sendEmail";
 
-    homeCtrl.sendMessage = function () {
+    menCollectionCtrl.sendMessage = function () {
         var req = {
             method: 'POST',
             url: localUrl,
@@ -85,20 +82,8 @@ homeApp.controller('HomeController', ['$scope', '$http', '$location', '$window',
     }
 
 
-    homeCtrl.redirectTo = function () {
-        $window.location.href = location.origin + '/OnlineStore/html/menCollection.html';
-    }
-
-    //Ejecucion inicial de la aplicacion
-    init();
-    function init() {
-        $http.get(localHost + "/OnlineStore/rest/InitApp/writeLog").then(function (response) {
-            sessionStorage.setItem("ipAddress", response.data.ip.hostAddress);
-        });
-        // $http.get(ipHost + "/OnlineStore/rest/InitApp/writeLog").then(function (response) {
-        //     sessionStorage.setItem("ipAddress", response.data.ip.hostAddress);
-        // });
-
+    menCollectionCtrl.redirectTo = function () {
+        $window.location.href = location.origin + '/OnlineStore/';
     }
 
     function cleanCustomerData() {
