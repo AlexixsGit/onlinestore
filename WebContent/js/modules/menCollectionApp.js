@@ -59,15 +59,15 @@ menCollectionApp.controller('MenCollectionController', ['$scope', '$http', '$win
                 'Content-Type': "application/json"
             },
             data: {
-                to: homeCtrl.email.to,
-                from: homeCtrl.email.from,
-                host: homeCtrl.email.host,
-                subject: homeCtrl.email.subject,
-                text: homeCtrl.email.text,
-                customerEmail: homeCtrl.email.customerEmail,
-                customerName: homeCtrl.email.customerName,
-                customerPhone: homeCtrl.email.customerPhone,
-                customerMessage: homeCtrl.email.customerMessage,
+                to: menCollectionCtrl.email.to,
+                from: menCollectionCtrl.email.from,
+                host: menCollectionCtrl.email.host,
+                subject: menCollectionCtrl.email.subject,
+                text: menCollectionCtrl.email.text,
+                customerEmail: menCollectionCtrl.email.customerEmail,
+                customerName: menCollectionCtrl.email.customerName,
+                customerPhone: menCollectionCtrl.email.customerPhone,
+                customerMessage: menCollectionCtrl.email.customerMessage,
                 ip: sessionStorage.getItem('ipAddress')
             }
         }
@@ -87,15 +87,15 @@ menCollectionApp.controller('MenCollectionController', ['$scope', '$http', '$win
     }
 
     function cleanCustomerData() {
-        homeCtrl.email.to = "";
-        homeCtrl.email.from = "";
-        homeCtrl.email.host = "";
-        homeCtrl.email.subject = "";
-        homeCtrl.email.text = "";
-        homeCtrl.email.customerEmail = "";
-        homeCtrl.email.customerName = "";
-        homeCtrl.email.customerPhone = "";
-        homeCtrl.email.customerMessage = "";
+        menCollectionCtrl.email.to = "";
+        menCollectionCtrl.email.from = "";
+        menCollectionCtrl.email.host = "";
+        menCollectionCtrl.email.subject = "";
+        menCollectionCtrl.email.text = "";
+        menCollectionCtrl.email.customerEmail = "";
+        menCollectionCtrl.email.customerName = "";
+        menCollectionCtrl.email.customerPhone = "";
+        menCollectionCtrl.email.customerMessage = "";
     }
 
 }]);
