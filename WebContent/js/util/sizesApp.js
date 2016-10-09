@@ -4,9 +4,9 @@
 var sizesApp = angular.module('sizesApp', []);
 
 sizesApp.constant('sizes', {
-    "S": "S",
-    "M": "M",
-    "L": "L",
-    "XL": "XL",
-    "XXL": "XXL"
+    "S": "SIZE_S",
+    "M": "SIZE_M",
+    "L": "SIZE_L",
+    "XL": "SIZE_XL",
+    "XXL": "SIZE_XXL"
 })

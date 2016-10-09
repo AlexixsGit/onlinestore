@@ -6,8 +6,8 @@ var categoriesAndSubApp = angular.module('categoriesAndSubApp', []);
 
 //Categorias disponibles
 categoriesAndSubApp.constant('categories', {
-    "Men": "M",
-    "Female": "F"
+    "Men": "CATEGORY_MEN",
+    "Female": "CATEGORY_FEMALE"
 })
 
 //Subcategorias niños, niñas
@@ -17,7 +17,7 @@ categoriesAndSubApp.constant('subCategories', {
 })
 
 //Subcategorias niños, niñas
-itemCategory.constant('itemCategory', {
+categoriesAndSubApp.constant('itemCategory', {
     "Jacket": "JAC", //chaqueta
     "Coat": "COA", // buso
     "Pant": "PAN", //Pantalon
@@ -26,7 +26,7 @@ itemCategory.constant('itemCategory', {
 })
 
 //Identifica si una prenda es coleccion nueva o vieja
-itemCategory.constant('itemCollection', {
-    "NEW": "NEW", //NUEVA
-    "OLD": "OLD"//VIEJA
+categoriesAndSubApp.constant('itemCollection', {
+    "New": "NEW_COLLECTION", //NUEVA
+    "Old": "OLD_COLLECTION"//VIEJA
 })

@@ -1,0 +1,19 @@
+.navbar-purchase .navbar-brand{
+  color: #fed136;
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+.navbar-purchase .navbar-brand:hover,
+.navbar-purchase .navbar-brand:focus,
+.navbar-purchase .navbar-brand:active,
+.navbar-purchase .navbar-brand.active {
+  color: #fec503;
+}
+
+.navbar-purchase .nav li a {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: white;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="menCollectionApp" ng-controller="MenCollectionController as menCollectionCtrl" ng-cloak>
+<html lang="en" ng-app="purchaseApp" ng-controller="PurchaseController as purchaseCtrl" ng-cloak>
 
 <head>
     <meta charset="utf-8">
@@ -28,6 +28,7 @@
 
     <!-- Theme CSS -->
     <link href="../css/agency.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +42,7 @@
 
 <body id="page-top" class="index" ng-cloak>
 
-    <div id="menCollectionErrorDiv" style="display:block" ng-cloak>
+    <div id="purchaseErrorDiv" style="display:block" ng-cloak>
         <div class="container">
             <div class="row">
                 <img src="../img/general/technicalerror.jpg" width="200px" class="img-responsive" alt="">
@@ -51,9 +52,9 @@
             </div>
         </div>
     </div>
-    <div id="menCollection" style="display:none">
+    <div id="purchase" style="display:none">
         <!-- Navigation -->
-        <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <nav id="mainNav" class="navbar navbar-inverse navbar-purchase navbar-fixed-top">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
@@ -61,7 +62,7 @@
 					<span class="sr-only">Toggle navigation</span> Menu <i
 						class="fa fa-bars"></i>
 				</button>
-                    <a class="navbar-brand page-scroll" ng-click="menCollectionCtrl.redirectTo()" style="cursor:pointer">{{::menCollectionCtrl.view.pageName}}</a>
+                    <a class="navbar-brand page-scroll" ng-click="purchaseCtrl.redirectTo()" style="cursor:pointer">{{::purchaseCtrl.view.pageName}}</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -70,52 +71,25 @@
                         <li class="hidden">
                             <a href="#page-top"></a>
                         </li>
-                        <li><a ng-click="menCollectionCtrl.redirectTo()" style="cursor:pointer">Inicio</a>
+                        <li><a ng-click="purchaseCtrl.redirectTo()" style="cursor:pointer">INICIO</a>
                         </li>
-                        <li><a class="page-scroll" data-toggle="dropdown" style="cursor:pointer">CATEGORÍAS
-							<span class="caret"></span>
-					</a>
-                            <ul class="dropdown-menu" style="background-color: black">
-                                <li class="dropdown-header">ROPA DE HOMBRE</li>
-                                <li><a href="#">Jeans</a></li>
-                                <li><a href="#">Camisas</a></li>
-                                <li><a href="#">Pantalones</a></li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">ROPA DE MUJER</li>
-                                <li><a href="#">Jeans</a></li>
-                                <li><a href="#">Blusas</a></li>
-                                <li><a href="#">Pantalones</a></li>
-                            </ul>
-                        </li>
-                    </ul>
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
             <!-- /.container-fluid -->
         </nav>
 
-        <!-- Header -->
-        <header ng-cloak>
-            <div class="container">
-                <div class="intro-text">
-                    <div class="intro-lead-in">{{::menCollectionCtrl.view.pageName}}</div>
-                    <div class="intro-heading">{{::menCollectionCtrl.view.title}}</div>
-                    <a href="#Servicios" class="page-scroll btn btn-xl">{{::menCollectionCtrl.view.headerButtonLabel}}</a>
-                </div>
-            </div>
-        </header>
-
         <!-- Portfolio Grid Section -->
         <section id="portfolio" class="bg-light-gray">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">{{::menCollectionCtrl.view.divLastCollectionTitle}}</h2>
-                        <h3 class="section-subheading text-muted">{{::menCollectionCtrl.view.divLastCollectionSubTitle}}</h3>
+                        <h2 class="section-heading">{{::purchaseCtrl.view.divLastCollectionTitle}}</h2>
+                        <h3 class="section-subheading text-muted">{{::purchaseCtrl.view.divLastCollectionSubTitle}}</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-sm-6 portfolio-item" ng-repeat="portfolioItem in menCollectionCtrl.portfolioItems">
+                    <div class="col-md-4 col-sm-6 portfolio-item" ng-repeat="portfolioItem in purchaseCtrl.portfolioItems">
                         <a href="{{portfolioItem.modalId}}" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content">
@@ -136,8 +110,8 @@
         <!-- Use the modals below to showcase details about your portfolio projects! -->
 
         <!--popups de detalle de prenda -->
-        <div ng-repeat="porfolioModaItem in menCollectionCtrl.portfolioModalItems" ng-cloak>
-            <div class="portfolio-modal modal fade" id="{{porfolioModaItem.id}}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div ng-repeat="porfolioModaItem in purchaseCtrl.portfolioModalItems" ng-cloak>
+            <div ng-cloak class="portfolio-modal modal fade" id="{{porfolioModaItem.id}}" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="close-modal" data-dismiss="modal">
@@ -151,7 +125,6 @@
                                     <div class="modal-body">
                                         <!-- Project Details Go Here -->
                                         <h2>{{porfolioModaItem.title}}</h2>
-                                        <p class="item-intro text-muted">{{porfolioModaItem.headerDescription}}</p>
                                         <img class="img-responsive img-centered img-portfolio-modal" src="../{{porfolioModaItem.image}}" alt="" width="400px">
                                         <p>{{porfolioModaItem.longDescription}}</p>
                                         <p>
@@ -166,6 +139,39 @@
 									<i class="fa fa-times"></i> Cerrar ventana
 								</button>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- POPUP DE CONFIRMACION DE COMPRA -->
+
+        <div class="portfolio-modal modal fade" id="exito" tabindex="-1" role="dialog" aria-hidden="true" ng-cloak>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                            <div class="rl"></div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <div class="modal-body">
+                                    <!-- Project Details Go Here -->
+                                    <h2>Compra exitosa</h2>
+                                    <p>Su compra ha sido realizada con exito, en el transcurso del día nos estaremos comunicando
+                                        con usted para confirmar la compra
+                                    </p>
+                                    <p>
+                                        <strong>Muchas gracias</strong>
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+									<i class="fa fa-times"></i> Cerrar ventana
+								</button>
                                 </div>
                             </div>
                         </div>
@@ -222,7 +228,7 @@
     <script src="../js/util/constantsApp.js"></script>
 
     <!-- Angular components -->
-    <script src="../js/modules/menCollectionApp.js"></script>
+    <script src="../js/modules/purchaseApp.js"></script>
 
 
 

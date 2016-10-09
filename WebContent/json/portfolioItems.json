@@ -7,15 +7,15 @@
 			"image": "img/portfolio/buso1.jpg",
 			"name": "Buso hombre",
 			"price": "$50.000",
-			"category": "M",
+			"category": "CATEGORY_MEN",
 			"subCategorY": "",
 			"itemCategory": "JAC",
 			"size": {
-				"S": "S",
-				"M": "M",
-				"L": "L"
+				"S": "SIZE_S",
+				"M": "SIZE_M",
+				"L": "SIZE_L"
 			},
-			"collection": "NEW"
+			"collection": "NEW_COLLECTION"
 		},
 		{
 			"code": "buso2",
@@ -24,14 +24,14 @@
 			"image": "img/portfolio/buso2.jpg",
 			"name": "Buso hombre",
 			"price": "$50.000",
-			"category": "M",
+			"category": "CATEGORY_MEN",
 			"size": {
-				"S": "S",
-				"M": "M",
-				"L": "L",
-				"XL": "XL"
+				"S": "SIZE_S",
+				"M": "SIZE_M",
+				"L": "SIZE_L",
+				"XL": "SIZE_XL"
 			},
-			"collection": "NEW"
+			"collection": "NEW_COLLECTION"
 		},
 		{
 			"code": "buso3",
@@ -40,30 +40,30 @@
 			"image": "img/portfolio/buso3.jpg",
 			"name": "Buso hombre",
 			"price": "$50.000",
-			"category": "M",
+			"category": "CATEGORY_MEN",
 			"size": {
-				"S": "S",
-				"M": "M",
-				"L": "L",
-				"XL": "XL"
+				"S": "SIZE_S",
+				"M": "SIZE_M",
+				"L": "SIZE_L",
+				"XL": "SIZE_XL"
 			},
-			"collection": "NEW"
+			"collection": "NEW_COLLECTION"
 		},
 		{
-			"code": "conjunto_pijama2",
+			"code": "jeandama1-1",
 			"reference": "",
 			"modalId": "#portfolioModal6",
-			"image": "img/portfolio/conjunto_pijama2.jpg",
-			"name": "Conjunto pijama",
+			"image": "img/portfolio/jeandama1-1.jpg",
+			"name": "Jean dama",
 			"price": "$25.000",
-			"category": "F",
+			"category": "CATEGORY_FEMALE",
 			"size": {
-				"S": "S",
-				"M": "M",
-				"L": "L",
-				"XL": "XL"
+				"S": "SIZE_S",
+				"M": "SIZE_M",
+				"L": "SIZE_L",
+				"XL": "SIZE_XL"
 			},
-			"collection": "OLD"
+			"collection": "NEW_COLLECTION"
 		},
 		{
 			"code": "buso4",
@@ -72,14 +72,14 @@
 			"image": "img/portfolio/buso4.jpg",
 			"name": "Buso hombre",
 			"price": "$50.000",
-			"category": "M",
+			"category": "CATEGORY_MEN",
 			"size": {
-				"S": "S",
-				"M": "M",
-				"L": "L",
-				"XL": "XL"
+				"S": "SIZE_S",
+				"M": "SIZE_M",
+				"L": "SIZE_L",
+				"XL": "SIZE_XL"
 			},
-			"collection": "NEW"
+			"collection": "NEW_COLLECTION"
 		},
 		{
 			"code": "buso5",
@@ -88,14 +88,14 @@
 			"image": "img/portfolio/buso5.jpg",
 			"name": "Buso hombre",
 			"price": "$50.000",
-			"category": "M",
+			"category": "CATEGORY_MEN",
 			"size": {
-				"S": "S",
-				"M": "M",
-				"L": "L",
-				"XL": "XL"
+				"S": "SIZE_S",
+				"M": "SIZE_M",
+				"L": "SIZE_L",
+				"XL": "SIZE_XL"
 			},
-			"collection": "NEW"
+			"collection": "NEW_COLLECTION"
 		},
 		{
 			"code": "buso6",
@@ -104,14 +104,14 @@
 			"image": "img/portfolio/buso6.jpg",
 			"name": "Buso hombre",
 			"price": "$50.000",
-			"category": "M",
+			"category": "CATEGORY_MEN",
 			"size": {
-				"S": "S",
-				"M": "M",
-				"L": "L",
-				"XL": "XL"
+				"S": "SIZE_S",
+				"M": "SIZE_M",
+				"L": "SIZE_L",
+				"XL": "SIZE_XL"
 			},
-			"collection": "NEW"
+			"collection": "NEW_COLLECTION"
 		}
 	]
 }

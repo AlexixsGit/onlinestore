@@ -436,8 +436,8 @@
 											<li>Precio: {{porfolioModaItem.price}}</li>
 											<li>Estado: {{porfolioModaItem.status}}</li>
 										</ul>
-										<button type="button" class="btn btn-primary" data-dismiss="modal">
-									<i class="fa fa-times"></i> Cerrar ventana
+										<button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="homeCtrl.goToPurchase()">
+									<i class="fa fa-times"></i> Ver detalle
 								</button>
 									</div>
 								</div>
@@ -447,40 +447,6 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- POPUP DE CONFIRMACION DE COMPRA -->
-
-		<div class="portfolio-modal modal fade" id="exito" tabindex="-1" role="dialog" aria-hidden="true" ng-cloak>
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="close-modal" data-dismiss="modal">
-						<div class="lr">
-							<div class="rl"></div>
-						</div>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-8 col-lg-offset-2">
-								<div class="modal-body">
-									<!-- Project Details Go Here -->
-									<h2>Compra exitosa</h2>
-									<p>Su compra ha sido realizada con exito, en el transcurso del día nos estaremos comunicando con usted para confirmar
-										la compra
-									</p>
-									<p>
-										<strong>Muchas gracias</strong>
-									</p>
-									<button type="button" class="btn btn-primary" data-dismiss="modal">
-									<i class="fa fa-times"></i> Cerrar ventana
-								</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
 
 		<footer ng-cloak>
 			<div class="container">
@@ -522,6 +488,12 @@
 
 	<!-- Theme JavaScript -->
 	<script src="js/agency.min.js"></script>
+
+	<!-- Angular components -->
+	<script src="js/util/categoriesAndSubApp.js"></script>
+
+	<!-- Angular components -->
+	<script src="js/util/constantsApp.js"></script>
 
 	<!-- Angular components -->
 	<script src="js/modules/homeApp.js"></script>
