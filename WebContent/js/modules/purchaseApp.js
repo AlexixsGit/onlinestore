@@ -23,7 +23,8 @@ purchaseApp.controller('PurchaseController',
             }
             //Recupera la lista de items que se muestran en el catalogo
             $http.get("../json/portfolioItems.json").then(function (response) {
-                purchaseCtrl.portfolioItems = filterFilter(response.data.PortfolioItems, categories.Men);
+                purchaseCtrl.portfolioItems = filterFilter(response.data.PortfolioItems,
+                    JSON.parse(sessionStorage.getItem('itemSelectedToPurchase')).codeItem);
             });
 
             //Recupera la lista de modales asociados a los items del catalogo

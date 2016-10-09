@@ -36,6 +36,12 @@ menCollectionApp.controller('MenCollectionController',
                 menCollectionCtrl.homeCategories = response.data.HomeCategories;
             });
 
+            //Ir a comprar
+            menCollectionCtrl.goToPurchase = function (itemSelected) {
+                sessionStorage.setItem('itemSelectedToPurchase', JSON.stringify(itemSelected));
+                $window.location.href = location.origin + '/OnlineStore/html/purchase.html';
+            }
+
             menCollectionCtrl.email = {
                 to: "",
                 from: "",

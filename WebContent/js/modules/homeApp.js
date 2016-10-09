@@ -47,7 +47,7 @@ homeApp.controller('HomeController',
 
             //Ir a comprar
             homeCtrl.goToPurchase = function (itemSelected) {
-                sessionStorage.setItem('itemSelectedToPurchase', itemSelected);
+                sessionStorage.setItem('itemSelectedToPurchase', JSON.stringify(itemSelected));
                 $window.location.href = location.origin + '/OnlineStore/html/purchase.html';
             }
 
