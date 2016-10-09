@@ -17,7 +17,20 @@
   letter-spacing: 1px;
   color: white;
 }
+.navbar-purchase .navbar-toggle {
+  background-color: #fed136;
+  border-color: #fed136;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 12px;
+}
 
+.navbar-purchase .navbar-toggle:hover,
+.navbar-purchase .navbar-toggle:focus {
+  background-color: #fed136;
+}
 .table-purchase .tr-purchase{
   margin-bottom: 10px;
 }
+

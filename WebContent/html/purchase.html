@@ -86,8 +86,8 @@
 
                     <div class="col-md-1 col-sm-6 portfolio-item">
                         <table class="table-purchase">
-                            <tr ng-repeat="portfolioItem in purchaseCtrl.portfolioItemsDetail" class="tr-purchase">
-                                <td>
+                            <tr >
+                                <td ng-repeat="portfolioItem in purchaseCtrl.portfolioItemsDetail" class="tr-purchase">
                                     <a href="{{portfolioItem.modalId}}" class="portfolio-link" data-toggle="modal">
                                         <div class="portfolio-hover">
                                             <div class="portfolio-hover-content">
