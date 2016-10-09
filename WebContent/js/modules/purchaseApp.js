@@ -32,6 +32,11 @@ purchaseApp.controller('PurchaseController',
                 purchaseCtrl.portfolioModalItems = response.data.PortfolioModalItmes;
             });
 
+            //Recupera la lista de prendas en diferentes perfiles
+            $http.get("../json/portfolioItemsDetail.json").then(function (response) {
+                purchaseCtrl.portfolioItemsDetail = response.data.PortfolioItemsDetail;
+            });
+
             purchaseCtrl.email = {
                 to: "",
                 from: "",
