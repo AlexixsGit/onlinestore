@@ -111,6 +111,28 @@
                             <img src="../{{portfolioItem.image}}" width="250px" class="img-responsive img-portfolio" alt="">
                         </a>
                     </div>
+
+                    <div class="col-md-4 col-sm-6 portfolio-item" ng-repeat="portfolioItem in purchaseCtrl.portfolioItems">
+                        <div>
+                            <h2 class="purchase-item-name">{{portfolioItem.name}}</h2>
+                            <p class="item-intro text-muted">{{portfolioItem.headerDescription}}</p>
+                            <ul style="list-style-type:none">
+                                <li>Ahora
+                                    <h3 style="margin-left:20px">{{portfolioItem.price}}</h3>
+                                </li>
+                                <li>Talla
+                                    <ul ng-if="portfolioItem.sizes.length > 0" style="margin-top:10px" class="list-inline">
+                                        <li ng-repeat="size in portfolioItem.sizes">
+                                            <span>{{size.name}}</span>
+                                            <input type="radio" name="radio" id="{{size.value}}" value="size.value">
+                                            <label for="{{size.value}}"></label>
+                                        </li>
+                                    </ul>
+                                    <h5 style="margin-top:10px;margin-left:20px" ng-if="portfolioItem.sizes.length == 0">Talla única</h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

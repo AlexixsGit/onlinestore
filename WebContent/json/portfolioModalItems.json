@@ -2,111 +2,48 @@
     "PortfolioModalItmes": [
         {
             "id": "portfolioModal1",
-            "codeItem":"buso1",
-            "title": "Chaqueta hombre",
-            "headerDescription": "Elegante y cálida chaqueta tipo koreana",
-            "image": "img/portfolio/jacket1.jpg",
-            "longDescription": "Perfecta para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca, ir a la oficina, ya que combina con cualquier prenda",
-            "shortDescription": "Comprála a un espectacular precio de oferta",
-            "date": "Octubre 2016",
-            "price": "$65.000",
-            "status": "Disponible"
+            "codeItem": "buso1",
+            "image": "img/portfolio/jacket1.jpg"
         },
         {
             "id": "portfolioModal2",
-            "codeItem":"buso2",
-            "title": "Jean para mujer",
-            "headerDescription": "El jean para toda ocasión",
-            "image": "img/portfolio/jeans1.jpg",
-            "longDescription": "Perfecta para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
-            "shortDescription": "Comprála a un espectacular precio de oferta",
-            "date": "Octubre 2016",
-            "price": "$50.000",
-            "status": "Disponible"
+            "codeItem": "buso2",
+            "image": "img/portfolio/jeans1.jpg"
         },
         {
             "id": "portfolioModal3",
-            "codeItem":"buso1",
-            "title": "Buso para hombre",
-            "headerDescription": "El buso para toda ocasión",
-            "image": "img/portfolio/buso1.jpg",
-            "longDescription": "Perfecto para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
-            "shortDescription": "Comprálo a un espectacular precio de oferta",
-            "date": "Octubre 2016",
-            "price": "$50.000",
-            "status": "Disponible"
+            "codeItem": "buso1",
+            "image": "img/portfolio/buso1.jpg"
         },
         {
             "id": "portfolioModal4",
-            "codeItem":"buso2",
-            "title": "Buso para hombre",
-            "headerDescription": "El buso para toda ocasión",
-            "image": "img/portfolio/buso2.jpg",
-            "longDescription": "Perfecto para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
-            "shortDescription": "Comprálo a un espectacular precio de oferta",
-            "date": "Octubre 2016",
-            "price": "$50.000",
-            "status": "Disponible"
+            "codeItem": "buso2",
+            "image": "img/portfolio/buso2.jpg"
         },
         {
             "id": "portfolioModal5",
-            "codeItem":"buso3",
-            "title": "Buso para hombre",
-            "headerDescription": "El buso para toda ocasión",
-            "image": "img/portfolio/buso3.jpg",
-            "longDescription": "Perfecto para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
-            "shortDescription": "Comprálo a un espectacular precio de oferta",
-            "date": "Octubre 2016",
-            "price": "$50.000",
-            "status": "Disponible"
+            "codeItem": "buso3",
+            "image": "img/portfolio/buso3.jpg"
         },
         {
             "id": "portfolioModal6",
-            "codeItem":"jeandama1-1",
-            "title": "Jean dama",
-            "headerDescription": "Jean",
-            "image": "img/portfolio/jeandama1-1.jpg",
-            "longDescription": "Perfecto para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
-            "shortDescription": "Comprálo a un espectacular precio de oferta",
-            "date": "Octubre 2016",
-            "price": "$25.000",
-            "status": "Disponible"
+            "codeItem": "jeandama1-1",
+            "image": "img/portfolio/jeandama1-1.jpg"
         },
         {
             "id": "portfolioModal7",
-            "codeItem":"buso4",
-            "title": "Buso para hombre",
-            "headerDescription": "El buso para toda ocasión",
-            "image": "img/portfolio/buso4.jpg",
-            "longDescription": "Perfecto para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
-            "shortDescription": "Comprálo a un espectacular precio de oferta",
-            "date": "Octubre 2016",
-            "price": "$50.000",
-            "status": "Disponible"
+            "codeItem": "buso4",
+            "image": "img/portfolio/buso4.jpg"
         },
         {
             "id": "portfolioModal8",
-            "codeItem":"buso5",
-            "title": "Buso para hombre",
-            "headerDescription": "El buso para toda ocasión",
-            "image": "img/portfolio/buso5.jpg",
-            "longDescription": "Perfecto para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
-            "shortDescription": "Comprálo a un espectacular precio de oferta",
-            "date": "Octubre 2016",
-            "price": "$50.000",
-            "status": "Disponible"
+            "codeItem": "buso5",
+            "image": "img/portfolio/buso5.jpg"
         },
         {
             "id": "portfolioModal9",
-            "codeItem":"buso6",
-            "title": "Buso para hombre",
-            "headerDescription": "El buso para toda ocasión",
-            "image": "img/portfolio/buso6.jpg",
-            "longDescription": "Perfecto para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
-            "shortDescription": "Comprálo a un espectacular precio de oferta",
-            "date": "Octubre 2016",
-            "price": "$50.000",
-            "status": "Disponible"
+            "codeItem": "buso6",
+            "image": "img/portfolio/buso6.jpg"
         }
     ]
 }

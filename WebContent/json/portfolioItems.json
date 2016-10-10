@@ -6,16 +6,30 @@
 			"modalId": "#portfolioModal3",
 			"image": "img/portfolio/buso1.jpg",
 			"name": "Buso hombre",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$50.000",
 			"category": "CATEGORY_MEN",
 			"subCategorY": "",
 			"itemCategory": "JAC",
-			"size": {
-				"S": "SIZE_S",
-				"M": "SIZE_M",
-				"L": "SIZE_L"
-			},
-			"collection": "NEW_COLLECTION"
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
+			"date": "Octubre 2016",
+			"collection": "NEW_COLLECTION",
+			"longDescription": "Perfecta para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
+			"shortDescription": "Comprála a un espectacular precio de oferta",
+			"status": "Disponible"
 		},
 		{
 			"code": "buso2",
@@ -23,14 +37,25 @@
 			"modalId": "#portfolioModal4",
 			"image": "img/portfolio/buso2.jpg",
 			"name": "Buso hombre",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$50.000",
 			"category": "CATEGORY_MEN",
-			"size": {
-				"S": "SIZE_S",
-				"M": "SIZE_M",
-				"L": "SIZE_L",
-				"XL": "SIZE_XL"
-			},
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
 			"collection": "NEW_COLLECTION"
 		},
 		{
@@ -39,14 +64,25 @@
 			"modalId": "#portfolioModal5",
 			"image": "img/portfolio/buso3.jpg",
 			"name": "Buso hombre",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$50.000",
 			"category": "CATEGORY_MEN",
-			"size": {
-				"S": "SIZE_S",
-				"M": "SIZE_M",
-				"L": "SIZE_L",
-				"XL": "SIZE_XL"
-			},
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
 			"collection": "NEW_COLLECTION"
 		},
 		{
@@ -55,14 +91,25 @@
 			"modalId": "#portfolioModal6",
 			"image": "img/portfolio/jeandama1-1.jpg",
 			"name": "Jean dama",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$25.000",
 			"category": "CATEGORY_FEMALE",
-			"size": {
-				"S": "SIZE_S",
-				"M": "SIZE_M",
-				"L": "SIZE_L",
-				"XL": "SIZE_XL"
-			},
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
 			"collection": "NEW_COLLECTION"
 		},
 		{
@@ -71,14 +118,25 @@
 			"modalId": "#portfolioModal7",
 			"image": "img/portfolio/buso4.jpg",
 			"name": "Buso hombre",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$50.000",
 			"category": "CATEGORY_MEN",
-			"size": {
-				"S": "SIZE_S",
-				"M": "SIZE_M",
-				"L": "SIZE_L",
-				"XL": "SIZE_XL"
-			},
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
 			"collection": "NEW_COLLECTION"
 		},
 		{
@@ -87,14 +145,25 @@
 			"modalId": "#portfolioModal8",
 			"image": "img/portfolio/buso5.jpg",
 			"name": "Buso hombre",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$50.000",
 			"category": "CATEGORY_MEN",
-			"size": {
-				"S": "SIZE_S",
-				"M": "SIZE_M",
-				"L": "SIZE_L",
-				"XL": "SIZE_XL"
-			},
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
 			"collection": "NEW_COLLECTION"
 		},
 		{
@@ -103,14 +172,25 @@
 			"modalId": "#portfolioModal9",
 			"image": "img/portfolio/buso6.jpg",
 			"name": "Buso hombre",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$50.000",
 			"category": "CATEGORY_MEN",
-			"size": {
-				"S": "SIZE_S",
-				"M": "SIZE_M",
-				"L": "SIZE_L",
-				"XL": "SIZE_XL"
-			},
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
 			"collection": "NEW_COLLECTION"
 		}
 	]
