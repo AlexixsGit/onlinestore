@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="purchaseApp" ng-controller="PurchaseController as purchaseCtrl" ng-cloak>
+<html lang="es" ng-app="purchaseApp" ng-controller="PurchaseController as purchaseCtrl" ng-cloak>
 
 <head>
     <meta charset="utf-8">
@@ -135,7 +135,7 @@
                             <span class="talla-error" ng-hide="purchaseCtrl.isValidToShowPurchasePopup">Selecciona una talla</span>
                             <button ng-show="purchaseCtrl.itemSizeSelected === '' && portfolioItem.sizes.length > 0" ng-click="purchaseCtrl.showPurchasePopup(portfolioItem)"
                                 class="page-scroll btn btn-xl-purchase">Comprar</button>
-                            <a href="#exito" ng-show="purchaseCtrl.itemSizeSelected !== '' || portfolioItem.sizes.length == 0" class="page-scroll btn btn-xl-purchase">Comprar</a>
+                            <a data-toggle="modal" href="#exito" ng-show="purchaseCtrl.itemSizeSelected !== '' || portfolioItem.sizes.length == 0" class="page-scroll btn btn-xl-purchase">Comprar</a>
                         </div>
                     </div>
                 </div>
@@ -183,16 +183,42 @@
                             <div class="col-lg-8 col-lg-offset-2">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here -->
-                                    <h2>Compra exitosa</h2>
-                                    <p>Su compra ha sido realizada con exito, en el transcurso del día nos estaremos comunicando
-                                        con usted para confirmar la compra
-                                    </p>
-                                    <p>
-                                        <strong>Muchas gracias</strong>
-                                    </p>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">
-									<i class="fa fa-times"></i> Cerrar ventana
-								</button>
+                                    <h4>Necesitamos los siguientes datos para hacer el envío</h4>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <form name="sentMessage" id="contactForm" novalidate>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Nombre *" id="name" required data-validation-required-message="Por favor ingresa tu nombre">
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="email" class="form-control" placeholder="Correo *" id="email" required data-validation-required-message="Por favor ingresa tu correo.">
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="tel" class="form-control" placeholder="Teléfono *" id="phone" required data-validation-required-message="Por favor ingresa tu teléfono.">
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Dirección *" id="address" required data-validation-required-message="Por favor ingresa la dirección.">
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" placeholder="Mensaje " id="message"></textarea>
+                                                            <p class="help-block text-danger"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                    <div class="form-group">
+                                                        <button type="submit" class="btn btn-xs-purchase-accept"><i class="glyphicon glyphicon-ok"></i> Aceptar</button>
+                                                        <button type="submit" class="btn btn-xs-purchase-refuse" data-dismiss="modal"><i class="glyphicon glyphicon-remove"></i> Rechazar</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -101,3 +101,53 @@
   font-weight: bolder;
   font-size: larger;
 }
+
+
+
+.btn-xs-purchase-accept {
+  color: white;
+  background-color: #fed136;
+  border-color: #fed136;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.btn-xs-purchase-accept:hover,
+.btn-xs-purchase-accept:focus,
+.btn-xs-purchase-accept:active,
+.btn-xs-purchase-accept.active {
+  color: white;
+  background-color: #fec503;
+  border-color: #f6bf01;
+}
+
+.btn-xs-purchase-refuse {
+  color: white;
+  background-color: rgba(160, 0, 0, 0.84);
+  border-color: rgba(121, 5, 5, 0.89);
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.btn-xs-purchase-refuse:hover,
+.btn-xs-purchase-refuse:focus,
+.btn-xs-purchase-refuse:active,
+.btn-xs-purchase-refuse.active {
+  color: white;
+  background-color: rgba(132, 20, 2, 0.95);
+  border-color: rgba(246, 1, 1, 0.9);
+}
+
+.text-danger{
+   color: #fed136;
+}

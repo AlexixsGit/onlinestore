@@ -29,6 +29,8 @@ purchaseApp.controller('PurchaseController',
             purchaseCtrl.isItemSizeSelected = false;
             //Variable que indica si cumplio las validaciones para mostrar el popup de compras
             purchaseCtrl.isValidToShowPurchasePopup = true;
+            //Registro seleccionado para ser comprado
+            purchaseCtrl.itemToPurchase = {};
             //Recupera la lista de items que se muestran en el catalogo
             $http.get("../json/portfolioItems.json").then(function (response) {
                 purchaseCtrl.portfolioItems = filterFilter(response.data.PortfolioItems,
@@ -47,7 +49,7 @@ purchaseApp.controller('PurchaseController',
             });
 
             //Validacion de datos obligatorios para mostrar el popup de compras
-            purchaseCtrl.showPurchasePopup = function (itemToPurchase) {
+            purchaseCtrl.showPurchasePopup = function (itemToPurchase) {                
                 purchaseCtrl.isValidToShowPurchasePopup = true;
                 if (itemToPurchase.sizes.length > 0 && purchaseCtrl.itemSizeSelected === '') {
                     purchaseCtrl.isItemSizeSelected = false;
