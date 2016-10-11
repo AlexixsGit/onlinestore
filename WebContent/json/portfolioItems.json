@@ -70,18 +70,7 @@
 			"subCategorY": "",
 			"itemCategory": "JAC",
 			"sizes": [
-				{
-					"name": "S",
-					"value": "SIZE_S"
-				},
-				{
-					"name": "M",
-					"value": "SIZE_M"
-				},
-				{
-					"name": "L",
-					"value": "SIZE_L"
-				}
+				
 			],
 			"collection": "NEW_COLLECTION"
 		},

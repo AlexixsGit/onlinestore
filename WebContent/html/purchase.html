@@ -124,13 +124,18 @@
                                     <ul ng-if="portfolioItem.sizes.length > 0" style="margin-top:10px" class="list-inline">
                                         <li ng-repeat="size in portfolioItem.sizes">
                                             <span>{{size.name}}</span>
-                                            <input type="radio" name="radio" id="{{size.value}}" value="size.value">
+                                            <input ng-model="purchaseCtrl.itemSizeSelected" ng-click="purchaseCtrl.itemSizeChanged()" type="radio" name="radio" id="{{size.value}}"
+                                                ng-value="size.value">
                                             <label for="{{size.value}}"></label>
                                         </li>
                                     </ul>
                                     <h5 style="margin-top:10px;margin-left:20px" ng-if="portfolioItem.sizes.length == 0">Talla única</h5>
                                 </li>
                             </ul>
+                            <span class="talla-error" ng-hide="purchaseCtrl.isValidToShowPurchasePopup">Selecciona una talla</span>
+                            <button ng-show="purchaseCtrl.itemSizeSelected === '' && portfolioItem.sizes.length > 0" ng-click="purchaseCtrl.showPurchasePopup(portfolioItem)"
+                                class="page-scroll btn btn-xl-purchase">Comprar</button>
+                            <a href="#exito" ng-show="purchaseCtrl.itemSizeSelected !== '' || portfolioItem.sizes.length == 0" class="page-scroll btn btn-xl-purchase">Comprar</a>
                         </div>
                     </div>
                 </div>

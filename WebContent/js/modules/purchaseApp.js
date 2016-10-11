@@ -21,6 +21,14 @@ purchaseApp.controller('PurchaseController',
                 divLastCollectionSubTitle: 'Lo más nuevo',
                 headerButtonLabel: 'Explorar',
             }
+
+
+            //Variable que almacena el valor seleccionado en las tallas
+            purchaseCtrl.itemSizeSelected = '';
+            //Variable que indica si una talla fue seleccionada
+            purchaseCtrl.isItemSizeSelected = false;
+            //Variable que indica si cumplio las validaciones para mostrar el popup de compras
+            purchaseCtrl.isValidToShowPurchasePopup = true;
             //Recupera la lista de items que se muestran en el catalogo
             $http.get("../json/portfolioItems.json").then(function (response) {
                 purchaseCtrl.portfolioItems = filterFilter(response.data.PortfolioItems,
@@ -37,6 +45,20 @@ purchaseApp.controller('PurchaseController',
                 purchaseCtrl.portfolioItemsDetail =
                     filterFilter(response.data.PortfolioItemsDetail, 'det_' + JSON.parse(sessionStorage.getItem('itemSelectedToPurchase')).codeItem);
             });
+
+            //Validacion de datos obligatorios para mostrar el popup de compras
+            purchaseCtrl.showPurchasePopup = function (itemToPurchase) {
+                purchaseCtrl.isValidToShowPurchasePopup = true;
+                if (itemToPurchase.sizes.length > 0 && purchaseCtrl.itemSizeSelected === '') {
+                    purchaseCtrl.isItemSizeSelected = false;
+                    purchaseCtrl.isValidToShowPurchasePopup = false;
+                }
+            }
+
+            purchaseCtrl.itemSizeChanged = function () {
+                purchaseCtrl.isItemSizeSelected = true;
+                purchaseCtrl.isValidToShowPurchasePopup = true;
+            }
 
             purchaseCtrl.email = {
                 to: "",
