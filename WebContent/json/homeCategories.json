@@ -1,0 +1,25 @@
+{
+    "HomeCategories": [
+        {
+            "urlId": "#MenCollection",
+            "image": "img/home/home_categoria1.jpg",
+            "title": "Hombres",
+            "description": "La mejor ropa para hombre",
+            "enable": "ENABLED"
+        },
+        {
+            "urlId": "#WomenCollection",
+            "image": "img/home/home_categoria2.jpg",
+            "title": "Mujeres",
+            "description": "La mejor ropa para mujer",
+            "enable": "ENABLED"
+        },
+        {
+            "urlId": "#ChildrenCollection",
+            "image": "img/home/home_categoria3.jpg",
+            "title": "Niños",
+            "description": "La mejor ropa para niños",
+            "enable": "ENABLED"
+        }
+    ]
+}

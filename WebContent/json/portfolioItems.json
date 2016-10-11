@@ -1,88 +1,186 @@
 {
 	"PortfolioItems": [
 		{
-			"modalId": "#portfolioModal1",
-			"image": "img/portfolio/jacket1.jpg",
-			"name": "Chaqueta hombre",
-			"price": "$65.000",
-			"category": "M"
-		},
-		{
-			"modalId": "#portfolioModal2",
-			"image": "img/portfolio/jeans1.jpg",
-			"name": "Jean mujer slim",
+			"code": "buso1",
+			"reference": "",
+			"modalId": "#portfolioModal3",
+			"image": "img/portfolio/buso1.jpg",
+			"name": "Buso hombre",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$50.000",
-			"category": "F"
+			"category": "CATEGORY_MEN",
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
+			"date": "Octubre 2016",
+			"collection": "NEW_COLLECTION",
+			"longDescription": "Perfecta para usar en cualquier ocasión, ya sea para salir a dar una vuelta, ir a la discoteca,ir a la oficina, ya que combina con cualquier prenda.",
+			"shortDescription": "Comprála a un espectacular precio de oferta",
+			"status": "Disponible"
 		},
 		{
-			"modalId": "#portfolioModal1",
-			"image": "img/portfolio/jacket1.jpg",
-			"name": "Chaqueta hombre",
-			"price": "$65.000",
-			"category": "M"
-		},
-		{
-			"modalId": "#portfolioModal2",
-			"image": "img/portfolio/jeans1.jpg",
-			"name": "Jean mujer slim",
+			"code": "buso2",
+			"reference": "",
+			"modalId": "#portfolioModal4",
+			"image": "img/portfolio/buso2.jpg",
+			"name": "Buso hombre",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$50.000",
-			"category": "F"
+			"category": "CATEGORY_MEN",
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
+			"collection": "NEW_COLLECTION"
 		},
 		{
-			"modalId": "#portfolioModal1",
-			"image": "img/portfolio/jacket1.jpg",
-			"name": "Chaqueta hombre",
-			"price": "$65.000",
-			"category": "M"
-		},
-		{
-			"modalId": "#portfolioModal2",
-			"image": "img/portfolio/jeans1.jpg",
-			"name": "Jean mujer slim",
+			"code": "buso3",
+			"reference": "",
+			"modalId": "#portfolioModal5",
+			"image": "img/portfolio/buso3.jpg",
+			"name": "Buso hombre",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$50.000",
-			"category": "F"
+			"category": "CATEGORY_MEN",
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				
+			],
+			"collection": "NEW_COLLECTION"
 		},
 		{
-			"modalId": "#portfolioModal1",
-			"image": "img/portfolio/jacket1.jpg",
-			"name": "Chaqueta hombre",
-			"price": "$65.000",
-			"category": "M"
+			"code": "jeandama1-1",
+			"reference": "",
+			"modalId": "#portfolioModal6",
+			"image": "img/portfolio/jeandama1-1.jpg",
+			"name": "Jean dama",
+			"headerDescription": "El buso para toda ocasión",
+			"price": "$25.000",
+			"category": "CATEGORY_FEMALE",
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
+			"collection": "NEW_COLLECTION"
 		},
 		{
-			"modalId": "#portfolioModal2",
-			"image": "img/portfolio/jeans1.jpg",
-			"name": "Jean mujer slim",
+			"code": "buso4",
+			"reference": "",
+			"modalId": "#portfolioModal7",
+			"image": "img/portfolio/buso4.jpg",
+			"name": "Buso hombre",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$50.000",
-			"category": "F"
+			"category": "CATEGORY_MEN",
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
+			"collection": "NEW_COLLECTION"
 		},
 		{
-			"modalId": "#portfolioModal1",
-			"image": "img/portfolio/jacket1.jpg",
-			"name": "Chaqueta hombre",
-			"price": "$65.000",
-			"category": "M"
-		},
-		{
-			"modalId": "#portfolioModal2",
-			"image": "img/portfolio/jeans1.jpg",
-			"name": "Jean mujer slim",
+			"code": "buso5",
+			"reference": "",
+			"modalId": "#portfolioModal8",
+			"image": "img/portfolio/buso5.jpg",
+			"name": "Buso hombre",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$50.000",
-			"category": "F"
+			"category": "CATEGORY_MEN",
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
+			"collection": "NEW_COLLECTION"
 		},
 		{
-			"modalId": "#portfolioModal1",
-			"image": "img/portfolio/jacket1.jpg",
-			"name": "Chaqueta hombre",
-			"price": "$65.000",
-			"category": "M"
-		},
-		{
-			"modalId": "#portfolioModal2",
-			"image": "img/portfolio/jeans1.jpg",
-			"name": "Jean mujer slim",
+			"code": "buso6",
+			"reference": "",
+			"modalId": "#portfolioModal9",
+			"image": "img/portfolio/buso6.jpg",
+			"name": "Buso hombre",
+			"headerDescription": "El buso para toda ocasión",
 			"price": "$50.000",
-			"category": "F"
+			"category": "CATEGORY_MEN",
+			"subCategorY": "",
+			"itemCategory": "JAC",
+			"sizes": [
+				{
+					"name": "S",
+					"value": "SIZE_S"
+				},
+				{
+					"name": "M",
+					"value": "SIZE_M"
+				},
+				{
+					"name": "L",
+					"value": "SIZE_L"
+				}
+			],
+			"collection": "NEW_COLLECTION"
 		}
 	]
 }

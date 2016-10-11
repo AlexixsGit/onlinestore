@@ -1,0 +1,23 @@
+{
+    "PortfolioItemsDetail": [
+        {
+            "code": "det_buso1",
+            "parentCode": "det_buso1",
+            "image": "img/portfolio/buso1.jpg",
+            "modalId": "#portfolioModal3"
+        },
+        {
+            "code": "det_buso1-2",
+            "parentCode": "det_buso1",
+            "image": "img/portfolio/buso2.jpg",
+            "modalId": "#portfolioModal4"
+        },
+        {
+            "code": "det_buso1-3",
+            "parentCode": "det_buso1",
+            "image": "img/portfolio/buso3.jpg",
+            "modalId": "#portfolioModal5"
+        }
+        
+    ]
+}

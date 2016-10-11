@@ -1,0 +1,100 @@
+.navbar-purchase .navbar-brand{
+  color: #fed136;
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+.navbar-purchase .navbar-brand:hover,
+.navbar-purchase .navbar-brand:focus,
+.navbar-purchase .navbar-brand:active,
+.navbar-purchase .navbar-brand.active {
+  color: #fec503;
+}
+
+.navbar-purchase .nav li a {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: white;
+}
+.navbar-purchase .navbar-toggle {
+  background-color: #fed136;
+  border-color: #fed136;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 12px;
+}
+
+.navbar-purchase .navbar-toggle:hover,
+.navbar-purchase .navbar-toggle:focus {
+  background-color: #fed136;
+}
+.table-purchase .tr-purchase{
+  margin-bottom: 10px;
+}
+
+.purchase-item-name{
+  text-align: center;
+}
+
+    input{
+    display:none;
+    }
+/*Then, style the label so it looks like however you want:*/
+
+    label{
+    width:25px;
+    height:25px;
+    border-radius:2;
+    border: 3px #3a3a3a solid;
+    display:block;
+    line-height:22px;
+    text-align:center;
+    color:black;
+    font-size:40pt;
+    cursor:pointer;
+    background:white;
+    position:relative;
+    } 
+     input:checked + label:before{
+       opacity:1;
+    }
+    label:before{
+        position:absolute;
+        top:5px;
+        left:5px;
+        height:15px;
+        width:15px;
+        background:#fed136;
+        content:'';
+        opacity:0;
+    }
+
+.btn-xl-purchase {
+  color: white;
+  background-color: #fed136;
+  border-color: #fed136;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 15px;
+  padding: 11px 58px;
+  margin-left: 17%;
+  margin-top: 16%;
+  text-align: center;
+}
+
+.btn-xl-purchase:hover,
+.btn-xl-purchase:focus,
+.btn-xl-purchase:active,
+.btn-xl-purchase.active {
+  color: white;
+  background-color: #fec503;
+  border-color: #f6bf01;
+}
+
+.talla-error{
+  margin-left:30px
+}
