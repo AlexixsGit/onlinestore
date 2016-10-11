@@ -96,5 +96,8 @@
 }
 
 .talla-error{
-  margin-left:30px
+  margin-left:30px;
+  color: #fed136;
+  font-weight: bolder;
+  font-size: larger;
 }
