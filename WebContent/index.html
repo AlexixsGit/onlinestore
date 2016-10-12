@@ -176,7 +176,7 @@
 				</div>
 				<div class="row">
 					<div class="col-md-4 col-sm-6 portfolio-item" ng-repeat="portfolioItem in homeCtrl.portfolioItems">
-						<a href="{{portfolioItem.modalId}}" class="portfolio-link" data-toggle="modal">
+						<a ng-click="homeCtrl.goToPurchase(portfolioItem)" class="portfolio-link">
 							<div class="portfolio-hover">
 								<div class="portfolio-hover-content">
 									<i class="fa fa-plus fa-3x"></i>
@@ -404,49 +404,6 @@
 				</div>
 			</div>
 		</section>
-
-
-		<!-- Portfolio Modals -->
-		<!-- Use the modals below to showcase details about your portfolio projects! -->
-
-		<!--popups de detalle de prenda -->
-		<div ng-repeat="porfolioModaItem in homeCtrl.portfolioModalItems" ng-cloak>
-			<div class="portfolio-modal modal fade" id="{{porfolioModaItem.id}}" tabindex="-1" role="dialog" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="close-modal" data-dismiss="modal">
-							<div class="lr">
-								<div class="rl"></div>
-							</div>
-						</div>
-						<div class="container">
-							<div class="row">
-								<div class="col-lg-8 col-lg-offset-2">
-									<div class="modal-body">
-										<!-- Project Details Go Here -->
-										<h2>{{porfolioModaItem.title}}</h2>
-										<p class="item-intro text-muted">{{porfolioModaItem.headerDescription}}</p>
-										<img class="img-responsive img-centered img-portfolio-modal" src="{{porfolioModaItem.image}}" alt="" width="400px">
-										<p>{{porfolioModaItem.longDescription}}</p>
-										<p>
-											<strong>{{porfolioModaItem.shortDescription}}</strong>
-										</p>
-										<ul class="list-inline">
-											<li>Fecha : {{porfolioModaItem.date}}</li>
-											<li>Precio: {{porfolioModaItem.price}}</li>
-											<li>Estado: {{porfolioModaItem.status}}</li>
-										</ul>
-										<button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="homeCtrl.goToPurchase(porfolioModaItem)">
-									<i class="fa fa-times"></i> Ver detalle
-								</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<footer ng-cloak>
 			<div class="container">

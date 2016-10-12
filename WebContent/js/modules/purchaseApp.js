@@ -43,7 +43,7 @@ purchaseApp.controller('PurchaseController',
             //Recupera la lista de items que se muestran en el catalogo
             $http.get("../json/portfolioItems.json").then(function (response) {
                 purchaseCtrl.portfolioItems = filterFilter(response.data.PortfolioItems,
-                    JSON.parse(sessionStorage.getItem('itemSelectedToPurchase')).codeItem);
+                    JSON.parse(sessionStorage.getItem('itemSelectedToPurchase')).code);
             });
 
             //Recupera la lista de modales asociados a los items del catalogo
@@ -54,7 +54,7 @@ purchaseApp.controller('PurchaseController',
             //Recupera la lista de prendas en diferentes perfiles
             $http.get("../json/portfolioItemsDetail.json").then(function (response) {
                 purchaseCtrl.portfolioItemsDetail =
-                    filterFilter(response.data.PortfolioItemsDetail, 'det_' + JSON.parse(sessionStorage.getItem('itemSelectedToPurchase')).codeItem);
+                    filterFilter(response.data.PortfolioItemsDetail, 'det_' + JSON.parse(sessionStorage.getItem('itemSelectedToPurchase')).code);
             });
 
             //Validacion de datos obligatorios para mostrar el popup de compras
