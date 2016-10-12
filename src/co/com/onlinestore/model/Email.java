@@ -2,56 +2,18 @@ package co.com.onlinestore.model;
 
 public class Email {
 
-	private String to = "";
-	private String from = "";
-	private String host = "";
-	private String subject = "";
-	private String text = "";
 	private String customerEmail = "";
 	private String customerName = "";
 	private String customerPhone = "";
 	private String customerMessage = "";
+	private String customerAddress = "";
 	private String ip = "";
+	private String productName = "";
+	private String productReference = "";
+	private String productCode = "";
+	private String productPrice = "";
+	private String productSize = "";
 
-	public String getTo() {
-		return to;
-	}
-
-	public void setTo(String to) {
-		this.to = to;
-	}
-
-	public String getFrom() {
-		return from;
-	}
-
-	public void setFrom(String from) {
-		this.from = from;
-	}
-
-	public String getHost() {
-		return host;
-	}
-
-	public void setHost(String host) {
-		this.host = host;
-	}
-
-	public String getSubject() {
-		return subject;
-	}
-
-	public void setSubject(String subject) {
-		this.subject = subject;
-	}
-
-	public String getText() {
-		return text;
-	}
-
-	public void setText(String text) {
-		this.text = text;
-	}
 
 	public String getCustomerName() {
 		return customerName;
@@ -91,5 +53,53 @@ public class Email {
 
 	public void setIp(String ip) {
 		this.ip = ip;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public String getProductCode() {
+		return productCode;
+	}
+
+	public void setProductCode(String productCode) {
+		this.productCode = productCode;
+	}
+
+	public String getProductPrice() {
+		return productPrice;
+	}
+
+	public void setProductPrice(String productPrice) {
+		this.productPrice = productPrice;
+	}
+
+	public String getProductSize() {
+		return productSize;
+	}
+
+	public void setProductSize(String productSize) {
+		this.productSize = productSize;
+	}
+
+	public String getProductReference() {
+		return productReference;
+	}
+
+	public void setProductReference(String productReference) {
+		this.productReference = productReference;
+	}
+
+	public String getCustomerAddress() {
+		return customerAddress;
+	}
+
+	public void setCustomerAddress(String customerAddress) {
+		this.customerAddress = customerAddress;
 	}
 }

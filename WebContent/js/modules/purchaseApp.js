@@ -22,6 +22,15 @@ purchaseApp.controller('PurchaseController',
                 headerButtonLabel: 'Explorar',
             }
 
+            //Objeto que contiene la informacion ingresada por el cliente
+            purchaseCtrl.customerInfo = {
+                name: '',
+                email: '',
+                phone: '',
+                address: '',
+                message: ''
+            }
+
 
             //Variable que almacena el valor seleccionado en las tallas
             purchaseCtrl.itemSizeSelected = '';
@@ -49,7 +58,7 @@ purchaseApp.controller('PurchaseController',
             });
 
             //Validacion de datos obligatorios para mostrar el popup de compras
-            purchaseCtrl.showPurchasePopup = function (itemToPurchase) {                
+            purchaseCtrl.showPurchasePopup = function (itemToPurchase) {
                 purchaseCtrl.isValidToShowPurchasePopup = true;
                 if (itemToPurchase.sizes.length > 0 && purchaseCtrl.itemSizeSelected === '') {
                     purchaseCtrl.isItemSizeSelected = false;
@@ -62,18 +71,18 @@ purchaseApp.controller('PurchaseController',
                 purchaseCtrl.isValidToShowPurchasePopup = true;
             }
 
-            purchaseCtrl.email = {
-                to: "",
-                from: "",
-                host: "",
-                subject: "",
-                text: "",
-                customerEmail: "",
-                customerName: "",
-                customerPhone: "",
-                customerMessage: ""
+            //Metodo para realizar la compra
+            $scope.purchase = function () {
+                purchaseCtrl.purchase = {
+                    product: purchaseCtrl.portfolioItems[0],
+                    customerInfo: purchaseCtrl.customerInfo
+                }
+                if (validate()) {
+                    purchaseCtrl.sendMessage();
+                }
             }
 
+            //Enviar mensaje
             purchaseCtrl.sendMessage = function () {
                 var req = {
                     method: 'POST',
@@ -82,22 +91,21 @@ purchaseApp.controller('PurchaseController',
                         'Content-Type': "application/json"
                     },
                     data: {
-                        to: purchaseCtrl.email.to,
-                        from: purchaseCtrl.email.from,
-                        host: purchaseCtrl.email.host,
-                        subject: purchaseCtrl.email.subject,
-                        text: purchaseCtrl.email.text,
-                        customerEmail: purchaseCtrl.email.customerEmail,
-                        customerName: purchaseCtrl.email.customerName,
-                        customerPhone: purchaseCtrl.email.customerPhone,
-                        customerMessage: purchaseCtrl.email.customerMessage,
-                        ip: sessionStorage.getItem('ipAddress')
+                        customerEmail: purchaseCtrl.purchase.customerInfo.email,
+                        customerName: purchaseCtrl.purchase.customerInfo.name,
+                        customerPhone: purchaseCtrl.purchase.customerInfo.phone,
+                        customerMessage: purchaseCtrl.purchase.customerInfo.message,
+                        customerAddress: purchaseCtrl.purchase.customerInfo.address,
+                        ip: sessionStorage.getItem('ipAddress'),
+                        productName: purchaseCtrl.purchase.product.name,
+                        productReference: purchaseCtrl.purchase.product.reference,
+                        productCode: purchaseCtrl.purchase.product.code,
+                        productPrice: purchaseCtrl.purchase.product.price,
+                        productSize: purchaseCtrl.itemSizeSelected !== '' ? purchaseCtrl.itemSizeSelected : 'Talla unica',
                     }
                 }
 
                 $http(req).then(function successCallback(response) {
-                    cleanCustomerData();
-
                 }, function errorCallback(response) {
                     // called asynchronously if an error occurs
                     // or server returns response with an error status.
@@ -109,16 +117,18 @@ purchaseApp.controller('PurchaseController',
                 $window.location.href = location.origin + '/OnlineStore/';
             }
 
-            function cleanCustomerData() {
-                purchaseCtrl.email.to = "";
-                purchaseCtrl.email.from = "";
-                purchaseCtrl.email.host = "";
-                purchaseCtrl.email.subject = "";
-                purchaseCtrl.email.text = "";
-                purchaseCtrl.email.customerEmail = "";
-                purchaseCtrl.email.customerName = "";
-                purchaseCtrl.email.customerPhone = "";
-                purchaseCtrl.email.customerMessage = "";
+
+            //Metodo que valida los campos obligatorios
+            function validate() {
+                if (purchaseCtrl.purchase.customerInfo.email === '')
+                    return false;
+                if (purchaseCtrl.purchase.customerInfo.name === '')
+                    return false;
+                if (purchaseCtrl.purchase.customerInfo.phone === '')
+                    return false;
+                if (purchaseCtrl.purchase.customerInfo.address === '')
+                    return false;
+                return true;
             }
 
         }]);

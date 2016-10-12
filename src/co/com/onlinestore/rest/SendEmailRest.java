@@ -89,6 +89,12 @@ public class SendEmailRest {
 		log.info("Telefono: " + email.getCustomerPhone());
 		log.info("Mensaje: " + email.getCustomerMessage());
 		log.info("Direccion ip: " + email.getIp());
+		log.info("Informacion del producto");
+		log.info("Nombre: " + email.getProductName());
+		log.info("Codigo: " + email.getProductCode());
+		log.info("Referencia: " + email.getProductReference());
+		log.info("Precio: " + email.getProductPrice());
+		log.info("Talla: " + email.getProductSize());
 	}
 
 	private String completeMessage(Email email) throws JsonParseException, JsonMappingException, IOException {
@@ -99,6 +105,13 @@ public class SendEmailRest {
 		message.append("Correo: " + email.getCustomerEmail()).append("\n");
 		message.append("Teléfono: " + email.getCustomerPhone()).append("\n\n");
 		message.append("Mensaje:\n " + email.getCustomerMessage()).append("\n");
+		message.append("\n ");
+		message.append("Informacion del producto\n ");
+		message.append("Nombre: " + email.getProductName()).append("\n");
+		message.append("Codigo: " + email.getProductCode()).append("\n");
+		message.append("Referencia: " + email.getProductReference()).append("\n");
+		message.append("Precio: " + email.getProductPrice()).append("\n");
+		message.append("Talla: " + email.getProductSize()).append("\n");
 
 		return message.toString();
 	}
