@@ -40,6 +40,11 @@ purchaseApp.controller('PurchaseController',
             purchaseCtrl.isValidToShowPurchasePopup = true;
             //Registro seleccionado para ser comprado
             purchaseCtrl.itemToPurchase = {};
+            //Indica si la compra fue exitosa
+            purchaseCtrl.purchaseDone = false;
+            //Indica que la compra esta en proceso
+            purchaseCtrl.purchaseInProgress = false;
+            purchaseCtrl.purchaseNotFinish = false;
             //Recupera la lista de items que se muestran en el catalogo
             $http.get("../json/portfolioItems.json").then(function (response) {
                 purchaseCtrl.portfolioItems = filterFilter(response.data.PortfolioItems,
@@ -65,7 +70,10 @@ purchaseApp.controller('PurchaseController',
                     purchaseCtrl.isValidToShowPurchasePopup = false;
                 }
             }
-
+            //Regresar al inicio
+            purchaseCtrl.returnToHome = function () {
+                $window.location.href = location.origin + '/OnlineStore/index.html';
+            }
             purchaseCtrl.itemSizeChanged = function () {
                 purchaseCtrl.isItemSizeSelected = true;
                 purchaseCtrl.isValidToShowPurchasePopup = true;
@@ -78,6 +86,7 @@ purchaseApp.controller('PurchaseController',
                     customerInfo: purchaseCtrl.customerInfo
                 }
                 if (validate()) {
+                    purchaseCtrl.purchaseInProgress = true;
                     purchaseCtrl.sendMessage();
                 }
             }
@@ -106,9 +115,12 @@ purchaseApp.controller('PurchaseController',
                 }
 
                 $http(req).then(function successCallback(response) {
+                    purchaseCtrl.purchaseDone = true;
+                    purchaseCtrl.purchaseInProgress = false;
                 }, function errorCallback(response) {
-                    // called asynchronously if an error occurs
-                    // or server returns response with an error status.
+                    purchaseCtrl.purchaseInProgress = false;
+                    purchaseCtrl.purchaseNotFinish = true;
+                    console.log(response);
                 });
             }
 

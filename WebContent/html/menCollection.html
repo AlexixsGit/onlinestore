@@ -28,6 +28,7 @@
 
 	<!-- Theme CSS -->
 	<link href="../css/agency.css" rel="stylesheet">
+	<link href="../css/styles.css" rel="stylesheet">
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -100,7 +101,7 @@
 				<div class="intro-text">
 					<div class="intro-lead-in">{{::menCollectionCtrl.view.pageName}}</div>
 					<div class="intro-heading">{{::menCollectionCtrl.view.title}}</div>
-					<a href="#Servicios" class="page-scroll btn btn-xl">{{::menCollectionCtrl.view.headerButtonLabel}}</a>
+					<a href="#portfolio" class="page-scroll btn btn-xl">{{::menCollectionCtrl.view.headerButtonLabel}}</a>
 				</div>
 			</div>
 		</header>
@@ -114,7 +115,7 @@
 						<h3 class="section-subheading text-muted">{{::menCollectionCtrl.view.divLastCollectionSubTitle}}</h3>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row" ng-if="menCollectionCtrl.portfolioItems.length > 0">
 					<div class="col-md-4 col-sm-6 portfolio-item" ng-repeat="portfolioItem in menCollectionCtrl.portfolioItems">
 						<a ng-click="menCollectionCtrl.goToPurchase(portfolioItem)" class="portfolio-link">
 							<div class="portfolio-hover">
@@ -130,6 +131,15 @@
 						</div>
 					</div>
 				</div>
+				<div class="row" ng-if="menCollectionCtrl.portfolioItems.length === 0">
+					<div class="div-alert">
+						<span class="no-products-alert">Lo sentimos en este momento no tenemos productos para esta categoría</span>
+					</div>
+					<div class="div-alert">
+						<a ng-click="menCollectionCtrl.returnToHome()" class="page-scroll btn btn-xl">Volver al inicio</a>
+					</div>
+				</div>
+
 			</div>
 		</section>
 

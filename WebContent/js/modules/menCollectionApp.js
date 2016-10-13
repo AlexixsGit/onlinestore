@@ -17,7 +17,7 @@ menCollectionApp.controller('MenCollectionController',
                 title: 'Las mejores ofertas',
                 divServiceTitle: 'Moda',
                 divServicesSubTitle: 'Elige tu categoría',
-                divLastCollectionTitle: 'Última colección',
+                divLastCollectionTitle: 'Ropa para hombre',
                 divLastCollectionSubTitle: 'Lo más nuevo',
                 headerButtonLabel: 'Explorar',
             }
@@ -40,6 +40,11 @@ menCollectionApp.controller('MenCollectionController',
             menCollectionCtrl.goToPurchase = function (itemSelected) {
                 sessionStorage.setItem('itemSelectedToPurchase', JSON.stringify(itemSelected));
                 $window.location.href = location.origin + '/OnlineStore/html/purchase.html';
+            }
+
+            //Regresar al inicio
+            menCollectionCtrl.returnToHome = function () {
+                $window.location.href = location.origin + '/OnlineStore/index.html';
             }
 
             menCollectionCtrl.email = {
