@@ -175,3 +175,16 @@ ul.page{
     float: right;
     padding-right: 114px;
 }
+
+header.men-collection {
+  background-image: url('../img/general/men-category-1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: white;
+}

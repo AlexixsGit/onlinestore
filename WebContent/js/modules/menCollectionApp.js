@@ -19,8 +19,8 @@ menCollectionApp.controller('MenCollectionController',
 
 
             menCollectionCtrl.view = {
-                pageName: 'El madrugón del hueco',
-                title: 'Las mejores ofertas',
+                pageName: 'Ropa para hombre',
+                title: 'Al mejor precio',
                 divServiceTitle: 'Moda',
                 divServicesSubTitle: 'Elige tu categoría',
                 divLastCollectionTitle: 'Ropa para hombre',

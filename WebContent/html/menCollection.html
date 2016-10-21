@@ -62,7 +62,7 @@
 					<span class="sr-only">Toggle navigation</span> Menu <i
 						class="fa fa-bars"></i>
 				</button>
-					<a class="navbar-brand page-scroll" ng-click="menCollectionCtrl.redirectTo()" style="cursor:pointer">{{::menCollectionCtrl.view.pageName}}</a>
+					<a class="navbar-brand page-scroll" ng-click="menCollectionCtrl.returnToHome()" style="cursor:pointer">{{::menCollectionCtrl.view.pageName}}</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -71,7 +71,7 @@
 						<li class="hidden">
 							<a href="#page-top"></a>
 						</li>
-						<li><a ng-click="menCollectionCtrl.redirectTo()" style="cursor:pointer">Inicio</a>
+						<li><a ng-click="menCollectionCtrl.returnToHome()" style="cursor:pointer">Inicio</a>
 						</li>
 						<li><a class="page-scroll" data-toggle="dropdown" style="cursor:pointer">CATEGORÍAS
 							<span class="caret"></span>
@@ -96,7 +96,7 @@
 		</nav>
 
 		<!-- Header -->
-		<header ng-cloak>
+		<header class="men-collection" ng-cloak>
 			<div class="container">
 				<div class="intro-text">
 					<div class="intro-lead-in">{{::menCollectionCtrl.view.pageName}}</div>
