@@ -14,7 +14,7 @@ menCollectionApp.controller('MenCollectionController',
 
             $scope.filteredData = []
                 , $scope.currentPage = 1
-                , $scope.numPerPage = 6
+                , $scope.numPerPage = 15
                 , $scope.maxSize = 5;
 
 
