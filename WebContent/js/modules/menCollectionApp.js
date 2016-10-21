@@ -1,4 +1,4 @@
-var menCollectionApp = angular.module('menCollectionApp', ['categoriesAndSubApp', 'constantsApp']);
+var menCollectionApp = angular.module('menCollectionApp', ['categoriesAndSubApp', 'constantsApp', 'directives']);
 
 menCollectionApp.run(function () {
     console.log('Ingresando al método principal de men collection...');
@@ -12,6 +12,12 @@ menCollectionApp.controller('MenCollectionController',
 
             var menCollectionCtrl = this;
 
+            $scope.filteredData = []
+                , $scope.currentPage = 1
+                , $scope.numPerPage = 6
+                , $scope.maxSize = 5;
+
+
             menCollectionCtrl.view = {
                 pageName: 'El madrugón del hueco',
                 title: 'Las mejores ofertas',
@@ -21,15 +27,17 @@ menCollectionApp.controller('MenCollectionController',
                 divLastCollectionSubTitle: 'Lo más nuevo',
                 headerButtonLabel: 'Explorar',
             }
-            //Recupera la lista de items que se muestran en el catalogo
-            $http.get("../json/portfolioItems.json").then(function (response) {
-                menCollectionCtrl.portfolioItems = filterFilter(response.data.PortfolioItems, categories.Men);
+
+
+            $scope.boundaryLinks = false;
+            $scope.$watch('currentPage + numPerPage', function () {
+                $http.get("../json/portfolioItems.json").then(function (response) {
+                    menCollectionCtrl.portfolioItems = filterFilter(response.data.PortfolioItems, categories.Men);
+                    $scope.boundaryLinks = true;
+                    paginate();
+                });
             });
 
-            //Recupera la lista de modales asociados a los items del catalogo
-            $http.get("../json/portfolioModalItems.json").then(function (response) {
-                menCollectionCtrl.portfolioModalItems = response.data.PortfolioModalItmes;
-            });
 
             //Recupera la lista de categorias disponibles
             $http.get("../json/homeCategories.json").then(function (response) {
@@ -44,66 +52,16 @@ menCollectionApp.controller('MenCollectionController',
 
             //Regresar al inicio
             menCollectionCtrl.returnToHome = function () {
-                $window.location.href = location.origin + '/OnlineStore/index.html';
-            }
-
-            menCollectionCtrl.email = {
-                to: "",
-                from: "",
-                host: "",
-                subject: "",
-                text: "",
-                customerEmail: "",
-                customerName: "",
-                customerPhone: "",
-                customerMessage: ""
-            }
-
-            menCollectionCtrl.sendMessage = function () {
-                var req = {
-                    method: 'POST',
-                    url: location.origin + "/OnlineStore/rest/SendEmailRest/sendEmail",
-                    headers: {
-                        'Content-Type': "application/json"
-                    },
-                    data: {
-                        to: menCollectionCtrl.email.to,
-                        from: menCollectionCtrl.email.from,
-                        host: menCollectionCtrl.email.host,
-                        subject: menCollectionCtrl.email.subject,
-                        text: menCollectionCtrl.email.text,
-                        customerEmail: menCollectionCtrl.email.customerEmail,
-                        customerName: menCollectionCtrl.email.customerName,
-                        customerPhone: menCollectionCtrl.email.customerPhone,
-                        customerMessage: menCollectionCtrl.email.customerMessage,
-                        ip: sessionStorage.getItem('ipAddress')
-                    }
-                }
-
-                $http(req).then(function successCallback(response) {
-                    cleanCustomerData();
-
-                }, function errorCallback(response) {
-                    // called asynchronously if an error occurs
-                    // or server returns response with an error status.
-                });
-            }
-
-
-            menCollectionCtrl.redirectTo = function () {
                 $window.location.href = location.origin + '/OnlineStore/';
             }
 
-            function cleanCustomerData() {
-                menCollectionCtrl.email.to = "";
-                menCollectionCtrl.email.from = "";
-                menCollectionCtrl.email.host = "";
-                menCollectionCtrl.email.subject = "";
-                menCollectionCtrl.email.text = "";
-                menCollectionCtrl.email.customerEmail = "";
-                menCollectionCtrl.email.customerName = "";
-                menCollectionCtrl.email.customerPhone = "";
-                menCollectionCtrl.email.customerMessage = "";
+            function paginate() {
+                begin = (($scope.currentPage - 1) * $scope.numPerPage);
+                end = begin + $scope.numPerPage;
+                if (menCollectionCtrl.portfolioItems !== undefined) {
+                    $scope.filteredData =
+                        menCollectionCtrl.portfolioItems.slice(begin, end);
+                }
             }
 
         }]);

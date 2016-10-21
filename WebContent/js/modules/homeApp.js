@@ -35,11 +35,6 @@ homeApp.controller('HomeController',
                 homeCtrl.portfolioItems = filterFilter(response.data.PortfolioItems, itemCollection.New);
             });
 
-            //Recupera la lista de modales asociados a los items del catalogo
-            $http.get("json/portfolioModalItems.json").then(function (response) {
-                homeCtrl.portfolioModalItems = response.data.PortfolioModalItmes;
-            });
-
             //Recupera la lista de categorias disponibles
             $http.get("json/homeCategories.json").then(function (response) {
                 homeCtrl.homeCategories = filterFilter(response.data.HomeCategories, enabled_disabled.Enabled);

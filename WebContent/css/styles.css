@@ -165,3 +165,13 @@ span.no-products-alert {
   font-weight: 600;
   padding: 10px 10px 12px 10px;
 }
+
+li.pagination-active a{
+  color: white;
+  background-color: #fec503;
+}
+
+ul.page{
+    float: right;
+    padding-right: 114px;
+}

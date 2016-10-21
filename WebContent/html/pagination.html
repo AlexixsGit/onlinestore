@@ -1,0 +1,9 @@
+<ul class="pagination page">
+	<li><a style="cursor:pointer" ng-click="previous()">&laquo;</a></li>
+	<li ng-repeat="num in numbers" ng-class="{'pagination-active':num.active}">
+		<a style="cursor:pointer" ng-click="changePage(num.number)" class="pagination-active">
+			{{num.text}}
+		</a>
+	</li>
+	<li><a style="cursor:pointer" ng-click="next()">&raquo;</a></li>
+</ul>
