@@ -69,9 +69,7 @@
 			"category": "CATEGORY_MEN",
 			"subCategorY": "",
 			"itemCategory": "JAC",
-			"sizes": [
-				
-			],
+			"sizes": [],
 			"collection": "NEW_COLLECTION"
 		},
 		{
@@ -82,7 +80,7 @@
 			"name": "Jean dama",
 			"headerDescription": "El buso para toda ocasión",
 			"price": "$25.000",
-			"category": "CATEGORY_FEMALE",
+			"category": "CATEGORY_WOMEN",
 			"subCategorY": "",
 			"itemCategory": "JAC",
 			"sizes": [

@@ -156,7 +156,7 @@
 				</div>
 				<div class="row">
 					<div class="col-sm-4" ng-repeat="item in  homeCtrl.homeCategories">
-						<div class="team-member" ng-click="homeCtrl.redirectTo()">
+						<div class="team-member" ng-click="homeCtrl.redirectTo(item.urlId)">
 							<img src="{{item.image}}" class="img-responsive img-circle" alt="">
 							<h4>{{item.title}}</h4>
 							<p class="text-muted">{{item.description}}</p>

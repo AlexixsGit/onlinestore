@@ -89,8 +89,8 @@ homeApp.controller('HomeController',
             }
 
 
-            homeCtrl.redirectTo = function () {
-                $window.location.href = location.origin + '/OnlineStore/html/menCollection.html';
+            homeCtrl.redirectTo = function (url) {
+                $window.location.href = location.origin + '/OnlineStore/html/'+url+'.html';
             }
 
             //Ejecucion inicial de la aplicacion
