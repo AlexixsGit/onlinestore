@@ -188,3 +188,17 @@ header.men-collection {
   text-align: center;
   color: white;
 }
+
+header.woman-collection {
+  background-image: url('../img/general/woman-category.jpg');
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: white;
+}
+
