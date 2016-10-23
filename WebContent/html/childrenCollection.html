@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="womenCollectionApp" ng-controller="WomenCollectionController as womenCollectionCtrl" ng-cloak>
+<html lang="en" ng-app="childrenCollectionApp" ng-controller="ChildrenCollectionController as childrenCollectionCtrl" ng-cloak>
 
 <head>
 	<meta charset="utf-8">
@@ -42,7 +42,7 @@
 
 <body id="page-top" class="index" ng-cloak>
 
-	<div id="womenCollectionErrorDiv" style="display:block" ng-cloak>
+	<div id="childrenCollectionErrorDiv" style="display:block" ng-cloak>
 		<div class="container">
 			<div class="row">
 				<img src="../img/general/technicalerror.jpg" width="200px" class="img-responsive" alt="">
@@ -52,7 +52,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="womenCollection" style="display:none">
+	<div id="childrenCollection" style="display:none">
 		<!-- Navigation -->
 		<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
 			<div class="container">
@@ -62,7 +62,7 @@
 					<span class="sr-only">Toggle navigation</span> Menu <i
 						class="fa fa-bars"></i>
 				</button>
-					<a class="navbar-brand page-scroll" ng-click="womenCollectionCtrl.returnToHome()" style="cursor:pointer">{{::womenCollectionCtrl.view.pageName}}</a>
+					<a class="navbar-brand page-scroll" ng-click="childrenCollectionCtrl.returnToHome()" style="cursor:pointer">{{::childrenCollectionCtrl.view.pageName}}</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -71,7 +71,7 @@
 						<li class="hidden">
 							<a href="#page-top"></a>
 						</li>
-						<li><a ng-click="womenCollectionCtrl.returnToHome()" style="cursor:pointer">Inicio</a>
+						<li><a ng-click="childrenCollectionCtrl.returnToHome()" style="cursor:pointer">Inicio</a>
 						</li>
 						<li ng-hide="true"><a class="page-scroll" data-toggle="dropdown" style="cursor:pointer">CATEGORÍAS
 							<span class="caret"></span>
@@ -99,9 +99,9 @@
 		<header class="men-collection" ng-cloak>
 			<div class="container">
 				<div class="intro-text">
-					<div class="intro-lead-in">{{::womenCollectionCtrl.view.pageName}}</div>
-					<div class="intro-heading">{{::womenCollectionCtrl.view.title}}</div>
-					<a href="#portfolio" class="page-scroll btn btn-xl">{{::womenCollectionCtrl.view.headerButtonLabel}}</a>
+					<div class="intro-lead-in">{{::childrenCollectionCtrl.view.pageName}}</div>
+					<div class="intro-heading">{{::childrenCollectionCtrl.view.title}}</div>
+					<a href="#portfolio" class="page-scroll btn btn-xl">{{::childrenCollectionCtrl.view.headerButtonLabel}}</a>
 				</div>
 			</div>
 		</header>
@@ -111,13 +111,13 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 text-center">
-						<h2 class="section-heading">{{::womenCollectionCtrl.view.divLastCollectionTitle}}</h2>
-						<h3 class="section-subheading text-muted">{{::womenCollectionCtrl.view.divLastCollectionSubTitle}}</h3>
+						<h2 class="section-heading">{{::childrenCollectionCtrl.view.divLastCollectionTitle}}</h2>
+						<h3 class="section-subheading text-muted">{{::childrenCollectionCtrl.view.divLastCollectionSubTitle}}</h3>
 					</div>
 				</div>
-				<div class="row" ng-if="womenCollectionCtrl.portfolioItems.length > 0">
+				<div class="row" ng-if="childrenCollectionCtrl.portfolioItems.length > 0">
 					<div class="col-md-4 col-sm-6 portfolio-item" ng-repeat="portfolioItem in filteredData">
-						<a ng-click="womenCollectionCtrl.goToPurchase(portfolioItem)" class="portfolio-link">
+						<a ng-click="childrenCollectionCtrl.goToPurchase(portfolioItem)" class="portfolio-link">
 							<div class="portfolio-hover">
 								<div class="portfolio-hover-content">
 									<i class="fa fa-plus fa-3x"></i>
@@ -131,17 +131,17 @@
 						</div>
 					</div>
 				</div>
-				<div class="row" ng-if="womenCollectionCtrl.portfolioItems.length === 0">
+				<div class="row" ng-if="childrenCollectionCtrl.portfolioItems.length === 0">
 					<div class="div-alert">
 						<span class="no-products-alert">Lo sentimos en este momento no tenemos productos para esta categoría</span>
 					</div>
 					<div class="div-alert">
-						<a ng-click="womenCollectionCtrl.returnToHome()" class="page-scroll btn btn-xl">Volver al inicio</a>
+						<a ng-click="childrenCollectionCtrl.returnToHome()" class="page-scroll btn btn-xl">Volver al inicio</a>
 					</div>
 				</div>
 
 			</div>
-			<pagination ng-show="womenCollectionCtrl.portfolioItems.length>1" ng-model="currentPage" total-items="womenCollectionCtrl.portfolioItems.length"
+			<pagination ng-show="childrenCollectionCtrl.portfolioItems.length>1" ng-model="currentPage" total-items="childrenCollectionCtrl.portfolioItems.length"
 				max-size="maxSize" boundary-links="boundaryLinks" number-per-page="numPerPage">
 			</pagination>
 
@@ -195,7 +195,7 @@
 	<script src="../js/util/constantsApp.js"></script>
 
 	<!-- Angular components -->
-	<script src="../js/modules/womenCollectionApp.js"></script>
+	<script src="../js/modules/childrenCollectionApp.js"></script>
 	<script src="../js/directives/pagination.js"></script>
 	<script src="../js/directives/registerDirectivesApp.js"></script>
 </body>

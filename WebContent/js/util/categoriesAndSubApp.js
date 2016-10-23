@@ -7,7 +7,8 @@ var categoriesAndSubApp = angular.module('categoriesAndSubApp', []);
 //Categorias disponibles
 categoriesAndSubApp.constant('categories', {
     "Men": "CATEGORY_MEN",
-    "Women": "CATEGORY_WOMEN"
+    "Women": "CATEGORY_WOMEN",
+    "Children": "CATEGORY_CHILDREN"
 })
 
 //Subcategorias niños, niñas

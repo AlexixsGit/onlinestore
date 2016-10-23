@@ -38,12 +38,6 @@ menCollectionApp.controller('MenCollectionController',
                 });
             });
 
-
-            //Recupera la lista de categorias disponibles
-            $http.get("../json/homeCategories.json").then(function (response) {
-                menCollectionCtrl.homeCategories = response.data.HomeCategories;
-            });
-
             //Ir a comprar
             menCollectionCtrl.goToPurchase = function (itemSelected) {
                 sessionStorage.setItem('itemSelectedToPurchase', JSON.stringify(itemSelected));

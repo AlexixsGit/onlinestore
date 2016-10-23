@@ -1,16 +1,16 @@
-var womenCollectionApp = angular.module('womenCollectionApp', ['categoriesAndSubApp', 'constantsApp', 'directives']);
+var childrenCollectionApp = angular.module('childrenCollectionApp', ['categoriesAndSubApp', 'constantsApp', 'directives']);
 
-womenCollectionApp.run(function () {
-    console.log('Ingresando al método principal de women collection...');
-    $('#womenCollection').show();
-    $('#womenCollectionErrorDiv').hide();
+childrenCollectionApp.run(function () {
+    console.log('Ingresando al método principal de children collection...');
+    $('#childrenCollection').show();
+    $('#childrenCollectionErrorDiv').hide();
 })
 
-womenCollectionApp.controller('WomenCollectionController',
+childrenCollectionApp.controller('ChildrenCollectionController',
     ['$scope', '$http', '$window', 'categories', 'filterFilter',
         function ($scope, $http, $window, categories, filterFilter) {
 
-            var womenCollectionCtrl = this;
+            var childrenCollectionCtrl = this;
 
             $scope.filteredData = []
                 , $scope.currentPage = 1
@@ -18,12 +18,12 @@ womenCollectionApp.controller('WomenCollectionController',
                 , $scope.maxSize = 5;
 
 
-            womenCollectionCtrl.view = {
-                pageName: 'Ropa para mujer',
+            childrenCollectionCtrl.view = {
+                pageName: 'Ropa para niños',
                 title: 'Al mejor precio',
                 divServiceTitle: 'Moda',
                 divServicesSubTitle: 'Elige tu categoría',
-                divLastCollectionTitle: 'Ropa para mujer',
+                divLastCollectionTitle: 'Ropa para niños',
                 divLastCollectionSubTitle: 'Lo más nuevo',
                 headerButtonLabel: 'Explorar',
             }
@@ -32,7 +32,7 @@ womenCollectionApp.controller('WomenCollectionController',
             $scope.boundaryLinks = false;
             $scope.$watch('currentPage + numPerPage', function () {
                 $http.get("../json/portfolioItems.json").then(function (response) {
-                    womenCollectionCtrl.portfolioItems = filterFilter(response.data.PortfolioItems, categories.Women);
+                    childrenCollectionCtrl.portfolioItems = filterFilter(response.data.PortfolioItems, categories.Children);
                     $scope.boundaryLinks = true;
                     paginate();
                 });
@@ -40,22 +40,22 @@ womenCollectionApp.controller('WomenCollectionController',
 
 
             //Ir a comprar
-            womenCollectionCtrl.goToPurchase = function (itemSelected) {
+            childrenCollectionCtrl.goToPurchase = function (itemSelected) {
                 sessionStorage.setItem('itemSelectedToPurchase', JSON.stringify(itemSelected));
                 $window.location.href = location.origin + '/OnlineStore/html/purchase.html';
             }
 
             //Regresar al inicio
-            womenCollectionCtrl.returnToHome = function () {
+            childrenCollectionCtrl.returnToHome = function () {
                 $window.location.href = location.origin + '/OnlineStore/';
             }
 
             function paginate() {
                 begin = (($scope.currentPage - 1) * $scope.numPerPage);
                 end = begin + $scope.numPerPage;
-                if (womenCollectionCtrl.portfolioItems !== undefined) {
+                if (childrenCollectionCtrl.portfolioItems !== undefined) {
                     $scope.filteredData =
-                        womenCollectionCtrl.portfolioItems.slice(begin, end);
+                        childrenCollectionCtrl.portfolioItems.slice(begin, end);
                 }
             }
 
