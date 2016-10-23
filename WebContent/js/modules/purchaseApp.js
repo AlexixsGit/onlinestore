@@ -13,7 +13,7 @@ purchaseApp.controller('PurchaseController',
             var purchaseCtrl = this;
 
             purchaseCtrl.view = {
-                pageName: 'El madrugón del hueco',
+                pageName: 'A tu estilo',
                 title: 'Las mejores ofertas',
                 divServiceTitle: 'Moda',
                 divServicesSubTitle: 'Elige tu categoría',

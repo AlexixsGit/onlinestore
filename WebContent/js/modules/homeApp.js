@@ -15,7 +15,7 @@ homeApp.controller('HomeController',
 
 
             homeCtrl.view = {
-                pageName: 'El madrugón del hueco',
+                pageName: 'A tu estilo',
                 title: 'Las mejores ofertas',
                 adds2Title: 'Nuevas colecciones',
                 adds2SubTitle: 'Mira lo más nuevo',

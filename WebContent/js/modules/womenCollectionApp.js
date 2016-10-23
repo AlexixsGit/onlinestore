@@ -19,7 +19,7 @@ womenCollectionApp.controller('WomenCollectionController',
 
 
             womenCollectionCtrl.view = {
-                pageName: 'Ropa para mujer',
+                pageName: 'A tu estilo',
                 title: 'Al mejor precio',
                 divServiceTitle: 'Moda',
                 divServicesSubTitle: 'Elige tu categoría',

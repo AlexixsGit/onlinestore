@@ -19,7 +19,7 @@ childrenCollectionApp.controller('ChildrenCollectionController',
 
 
             childrenCollectionCtrl.view = {
-                pageName: 'Ropa para niños',
+                pageName: 'A tu estilo',
                 title: 'Al mejor precio',
                 divServiceTitle: 'Moda',
                 divServicesSubTitle: 'Elige tu categoría',
