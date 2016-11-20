@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="menCollectionApp" ng-controller="MenCollectionController as menCollectionCtrl" ng-cloak>
+<html lang="es" ng-app="formaPagoApp" ng-controller="FormaPagoController as formaPagoCtrl" ng-cloak>
 
 <head>
 	<meta charset="utf-8">
@@ -42,7 +42,7 @@
 
 <body id="page-top" class="index" ng-cloak>
 
-	<div id="menCollectionErrorDiv" style="display:block" ng-cloak>
+	<div id="formaPagoDiv" style="display:block" ng-cloak>
 		<div class="container">
 			<div class="row">
 				<img src="../img/general/technicalerror.jpg" width="200px" class="img-responsive" alt="">
@@ -52,9 +52,9 @@
 			</div>
 		</div>
 	</div>
-	<div id="menCollection" style="display:none">
+	<div id="formaPago" style="display:none">
 		<!-- Navigation -->
-		<nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+		<nav id="mainNav" class="navbar navbar-inverse navbar-purchase navbar-fixed-top">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header page-scroll">
@@ -62,7 +62,7 @@
 					<span class="sr-only">Toggle navigation</span> Menu <i
 						class="fa fa-bars"></i>
 				</button>
-					<a class="navbar-brand page-scroll" ng-click="menCollectionCtrl.returnToHome()" style="cursor:pointer">{{::menCollectionCtrl.view.pageName}}</a>
+					<a class="navbar-brand page-scroll" ng-click="formaPagoCtrl.redirectTo()" style="cursor:pointer">{{::formaPagoCtrl.view.pageName}}</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -71,83 +71,45 @@
 						<li class="hidden">
 							<a href="#page-top"></a>
 						</li>
-						<li><a ng-click="menCollectionCtrl.returnToHome()" style="cursor:pointer">Inicio</a>
+						<li><a ng-click="formaPagoCtrl.redirectTo()" style="cursor:pointer">INICIO</a>
 						</li>
-						<li ng-hide="true"><a class="page-scroll" data-toggle="dropdown" style="cursor:pointer">CATEGORÍAS
-							<span class="caret"></span>
-					</a>
-							<ul class="dropdown-menu" style="background-color: black">
-								<li class="dropdown-header">ROPA DE HOMBRE</li>
-								<li><a href="#">Jeans</a></li>
-								<li><a href="#">Camisas</a></li>
-								<li><a href="#">Pantalones</a></li>
-								<li class="divider"></li>
-								<li class="dropdown-header">ROPA DE MUJER</li>
-								<li><a href="#">Jeans</a></li>
-								<li><a href="#">Blusas</a></li>
-								<li><a href="#">Pantalones</a></li>
-							</ul>
-						</li>
-					</ul>
 				</div>
 				<!-- /.navbar-collapse -->
 			</div>
 			<!-- /.container-fluid -->
 		</nav>
 
-		<!-- Header -->
-		<header class="men-collection" ng-cloak>
-			<div class="container">
-				<div class="intro-text">
-					<div class="intro-lead-in">{{::menCollectionCtrl.view.pageName}}</div>
-					<div class="intro-heading">{{::menCollectionCtrl.view.title}}</div>
-					<a href="#portfolio" class="page-scroll btn btn-xl">{{::menCollectionCtrl.view.headerButtonLabel}}</a>
-				</div>
-			</div>
-		</header>
-
 		<!-- Portfolio Grid Section -->
 		<section id="portfolio" class="bg-light-gray">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h2 class="section-heading">{{::menCollectionCtrl.view.divLastCollectionTitle}}</h2>
-						<h3 class="section-subheading text-muted">{{::menCollectionCtrl.view.divLastCollectionSubTitle}}</h3>
-					</div>
-				</div>
-				<div class="row" ng-if="menCollectionCtrl.portfolioItems.length > 0">
-					<div class="col-md-4 col-sm-6 portfolio-item" ng-repeat="portfolioItem in filteredData">
-						<a ng-click="menCollectionCtrl.goToPurchase(portfolioItem)" class="portfolio-link">
-							<div class="portfolio-hover">
-								<div class="portfolio-hover-content">
-									<i class="fa fa-plus fa-3x"></i>
-								</div>
-							</div>
-							<img src="../{{portfolioItem.image}}" width="250px" class="img-responsive img-portfolio" alt="">
-						</a>
-						<div class="portfolio-caption">
-							<h4>{{portfolioItem.name}}</h4>
-							<p class="text-muted">{{portfolioItem.price}}</p>
-						</div>
-					</div>
-				</div>
-				<div class="row" ng-if="menCollectionCtrl.portfolioItems.length === 0">
-					<div class="div-alert">
-						<span class="no-products-alert">Lo sentimos en este momento no tenemos productos para esta categoría</span>
-					</div>
-					<div class="div-alert">
-						<a ng-click="menCollectionCtrl.returnToHome()" class="page-scroll btn btn-xl">Volver al inicio</a>
-					</div>
-				</div>
 
+					<p>
+						<h3>Formas de pago</h3>
+					</p>
+					<p>
+						ATuEstilo quiere brindarte confianza y seguridad a la hora de realizar tus compras por internet, por eso hemos optado por
+						pago contra entrega, la modalidad de pago que permite que pagues tus productos una vez los tengas en tus manos, así
+						podrás estar seguro de que el producto que solicitaste realmente lo sea y que se encuentra en buen estado.
+					</p>
+					<p>
+						Si no te encuentras en el momento de la entrega, otra persona mayor de edad podrá recibirlo por ti siempre y cuando tenga
+						la totalidad del dinero de la compra.
+					</p>
+					<p>
+						La compra debe de ser cancelada en efectivo, no se reciben ningún otro medio de pago como cheques, tarjetas débito o crédito
+						o cualquier otro existente.
+					</p>
+					<p>
+						Tratar de tener la cantidad exacta de dinero de la compra, ya que nuestros mensajeros no todas las veces llevan cambio.
+					</p>
+					<p>
+						Contra entrega es la forma de pago preferida de nuestros clientes, compra todo lo que quieras en nuestra web y paga cuando
+						lo recibas.
+					</p>
+				</div>
 			</div>
-			<pagination ng-show="menCollectionCtrl.portfolioItems.length>1" ng-model="currentPage" total-items="menCollectionCtrl.portfolioItems.length"
-				max-size="maxSize" boundary-links="boundaryLinks" number-per-page="numPerPage">
-			</pagination>
-
 		</section>
-
-
 		<footer ng-cloak>
 			<div class="container">
 				<div class="row">
@@ -192,9 +154,7 @@
 	<script src="../js/util/constantsApp.js"></script>
 
 	<!-- Angular components -->
-	<script src="../js/modules/menCollectionApp.js"></script>
-	<script src="../js/directives/pagination.js"></script>
-	<script src="../js/directives/registerDirectivesApp.js"></script>
+	<script src="../js/modules/formaPagoApp.js"></script>
 </body>
 
 </html>

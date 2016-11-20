@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="politicaEnvioApp" ng-controller="PoliticaEnvioController as politicaEnvioCtrl" ng-cloak>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>A tu estilo</title>
+
+	<!-- ANGULAR -->
+	<script src="../js/angular.min.js"></script>
+
+	<!--ENRUTAMIENTO ANGULAR -->
+	<script src="../js/angular-route.min.js"></script>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+	<link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="../fonts/montserrat.css" rel="stylesheet" type="text/css">
+	<link href='../fonts/kaushanscript.css' rel='stylesheet' type='text/css'>
+	<link href='../fonts/droidserif.css' rel='stylesheet' type='text/css'>
+	<link href='../fonts/robotoslab.css' rel='stylesheet' type='text/css'>
+
+	<!-- Theme CSS -->
+	<link href="../css/agency.css" rel="stylesheet">
+	<link href="../css/styles.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body id="page-top" class="index" ng-cloak>
+
+	<div id="politicaEnvioDiv" style="display:block" ng-cloak>
+		<div class="container">
+			<div class="row">
+				<img src="../img/general/technicalerror.jpg" width="200px" class="img-responsive" alt="">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading">En este momento el sistema no esta disponible, por favor intenta más tarde</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="politicaEnvio" style="display:none">
+		<!-- Navigation -->
+		<nav id="mainNav" class="navbar navbar-inverse navbar-purchase navbar-fixed-top">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> Menu <i
+						class="fa fa-bars"></i>
+				</button>
+					<a class="navbar-brand page-scroll" ng-click="politicaEnvioCtrl.redirectTo()" style="cursor:pointer">{{::politicaEnvioCtrl.view.pageName}}</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li><a ng-click="politicaEnvioCtrl.redirectTo()" style="cursor:pointer">INICIO</a>
+						</li>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
+
+		<!-- Portfolio Grid Section -->
+		<section id="portfolio" class="bg-light-gray">
+			<div class="container">
+				<div class="row">
+
+					<p>
+						<h3>ATuestilo</h3>
+					</p>
+					<p>
+						<b>POLÍTICA DE ENVÍO</b><br> ATuEstilo realiza despachos sin costo de envío únicamente a los municipios de Medellín,
+						bello y envigado, para otros sitios que se encuentren únicamente dentro del territorio colombiano el cliente deberá
+						asumir el costo del envío que varía dependiendo la ciudad y la transportadora de su preferencia y el costo total será
+						informado al momento de la confirmación del pedido. El tiempo de entrega de los productos es aproximadamente 3 días
+						incluyendo sábados y domingos para las ciudades Medellín, bello y envigado, hasta 5 días hábiles para ciudades principales
+						y hasta 11 días hábiles para otros destinos dependiendo la disponibilidad de la transportadora elegida.
+					</p>
+					<p>
+						<b>Tiempos de entrega</b><br> Los tiempos de entrega empiezan a contar a partir de la confirmación de la compra que
+						se realiza vía telefónica. En el momento de la aprobación del pedido, recibirás un correo electrónico a la dirección
+						que ingresaste con la confirmación del mismo.
+					</p>
+					<p>
+						Las entregas no se pueden realizar en un horario exacto por tal razón la empresa hará una llamada únicamente a los municipios
+						de Medellín, bello y envigado para confirmar la entrega horas antes de realizarse, para otras ciudades aplican las
+						políticas de la transportadora. En caso de que tengas alguna inquietud con el despacho del producto puedes comunicarte
+						con la línea de Servicio al cliente 3217664126(en horario de lunes a viernes de 8am-5pm o sábados de 8am-12pm), o través
+						de nuestro correo atuestiloweb@gmail.com
+					</p>
+					<p>
+						El producto podrá ser recibido e inspeccionado por cualquier persona mayor de edad que esté presente en el lugar de entrega,
+						para lo cual deberá solo firmar la guía del transportador
+					</p>
+					<p>
+						En caso que el producto tenga señas de daños o rupturas en su empaque en el momento de la entrega, debes informarlo al transportador
+						el cual deberá escribir la observación y deberás comunicarte con la línea de Servicio al cliente 3217664126 (en horario
+						de lunes a viernes de 8am-5pm o sábados de 8am-12pm), a través de nuestro correo atuestiloweb@gmail.com, e informar
+						lo sucedido para seguir el respectivo procedimiento, recuerda que el mensajero solo tiene autorización de entregar
+						el producto
+					</p>
+					<p>
+						<b>Costo del envío</b><br> El envío de los pedidos es gratuito a las ciudades de Medellín por compras superiores o
+						iguales a $20.000, para bello y envigado por compras iguales o superiores a $40.000; para compras inferiores a éste
+						valor, el costo del envío será determinado en cada caso particular dependiendo del destino, peso y volumen del paquete.
+						Este valor se te informará en el proceso de confirmación de compra.
+					</p>
+					<p>
+						<b>POLÍTICAS DE CAMBIO</b><br> Cambios o devoluciones La empresa no acepta devoluciones de dinero, solo se aceptan
+						cambios por productos del mismo valor o inferior que hayan sido reportados por imperfectos o por no ser el producto
+						que solicito y debe de ser informado el mismo día que fue recibido por medio de la línea de Servicio al cliente 3217664126
+						(en horario de lunes a viernes de 8am-5pm o sábados de 8am-12pm), a través de nuestro correo atuestiloweb@gmail.com
+					</p>
+					<p>
+						El costo de la devolución será asumido por el cliente, se programará una fecha de recolección de la prenda con el cliente,
+						el cual deberá entregarla en el empaque original y con el estado en que fue recibida, la empresa valida que la prenda
+						este en buen estado y se comunica con el cliente, para informarle si el cambio se realizará o no, en caso de que no
+						cumpla con las condiciones mencionadas, se le reenviara la prenda al cliente, si la prenda cumple las condiciones de
+						cambio, la empresa tendrá un plazo máximo de 15 días hábiles para efectuar el cambio en las ciudades de Medellín, bello
+						y envigado, para el resto del país el tiempo estimado es según la disponibilidad de la transportadora.
+					</p>
+					<p>
+						Para cambiar la prenda por nuestra página web debes realizar una nueva compra con el producto que deseas adquirir y en el
+						campo mensaje indicar que es una devolución y poner el código del producto que adquiriste anteriormente.
+					</p>
+					<p>
+						Todos los cambios están sujetos a disponibilidad en el inventario.
+					</p>
+				</div>
+			</div>
+		</section>
+		<footer ng-cloak>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<span class="copyright">Correo: atuestiloweb@gmail.com</span>
+					</div>
+					<div class="col-md-4">
+						<ul class="list-inline social-buttons">
+							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<span class="copyright">Celular: 3217664126</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- jQuery -->
+	<script src="../vendor/jquery/jquery.min.js"></script>
+
+	<!-- Bootstrap Core JavaScript -->
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Plugin JavaScript -->
+	<script src="../js/jquery.easing.min.js"></script>
+
+	<!-- Contact Form JavaScript -->
+	<script src="../js/jqBootstrapValidation.js"></script>
+	<script src="../js/contact_me.js"></script>
+
+	<!-- Theme JavaScript -->
+	<script src="../js/agency.min.js"></script>
+
+	<!-- Angular components -->
+	<script src="../js/util/categoriesAndSubApp.js"></script>
+	<!-- Angular components -->
+	<script src="../js/util/constantsApp.js"></script>
+
+	<!-- Angular components -->
+	<script src="../js/modules/politicaEnvioApp.js"></script>
+
+
+
+</body>
+
+</html>

@@ -45,8 +45,8 @@ public class SendEmailRest {
 
 		writeLog(email);
 
-		final String username = "alexixsortizz@gmail.com";
-		final String password = "Dom15May";
+		final String username = "atuestiloweb@gmail.com";
+		final String password = "May15Dom";
 		final String port = "587";
 		final String subject = "Pedido realizado";
 
@@ -66,8 +66,8 @@ public class SendEmailRest {
 		try {
 
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("almejorPrecio@gmail.com"));
-			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("alexixsortizz@gmail.com"));
+			message.setFrom(new InternetAddress("atuestiloweb@gmail.com"));
+			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("atuestiloweb@gmail.com"));
 			message.setSubject(subject);
 			message.setText(completeMessage(email));
 
